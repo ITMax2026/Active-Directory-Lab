@@ -7,6 +7,10 @@
   - Download the Windows Server 2022 ISO file from Microsoft Evaluation Center (I chose to use Windows Server 2022 over Windows Server 2025 because it is widely deployed and has more tutorials online)
   
 3. Create a new Virtual Machine
-  - 
+  - Click to install the operating system later
+  - Hard Disk: 20 GB
+  - Memory: 2 GB
+  - Processors: 2
+ 
 
-4. 
+4. Load the ISO file from the VM settings
