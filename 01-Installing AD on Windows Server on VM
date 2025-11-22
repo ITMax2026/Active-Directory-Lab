@@ -1,7 +1,7 @@
 1. Download and Install VMWare Workstation Pro
   - Download VMWare Workstation Pro 25H2 once you have logged in from the Broadcom website
-  - This was a refurbished PC with a fresh Winodws install so no preexisting setting.  I did not have HyperV, Windows Hypervisor Platform(WHP) or Virtual Machine(VMP) enabled so I was able to use the native VMWare hypervisor
-  - To help with performance I also disabled Memory Integrity, which relies on WHP and can lead to sluggishness
+  - Disable HyperV, Windows Hypervisor Platform(WHP) and Virtual Machine(VMP).  Disable Memory Integrity.  This is to run native VMWare hypervisor
+  * When running systeminfo I still received Virtualizatiob-based security status:Running and App Control for Business Policy: Enforced.  I decided to install you Windows Hypervisor Platform
 
 2. Download and Install Windows Server 2022
   - Download the Windows Server 2022 ISO file from Microsoft Evaluation Center (I chose to use Windows Server 2022 over Windows Server 2025 because it is widely deployed and has more tutorials online)
@@ -12,5 +12,4 @@
   - Memory: 2 GB
   - Processors: 2
  
-
 4. Load the ISO file from the VM settings
