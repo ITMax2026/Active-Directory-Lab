@@ -2,3 +2,8 @@
   - Download VMWare Workstation Pro 25H2 once you have logged in from the Broadcom website
   - This was a refurbished PC with a fresh Winodws install so no preexisting setting.  I did not have HyperV, Windows Hypervisor Platform(WHP) or Virtual Machine(VMP) enabled so I was able to use the native VMWare hypervisor
   - To help with performance I also disabled Memory Integrity, which relies on WHP and can lead to sluggishness
+
+2. Download and Install Windows Server 2022 (I chose to use Windows Server 2022 over Windows
+  - Download
+
+3. 
