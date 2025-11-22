@@ -1,1 +1,4 @@
-
+1. Download and Install VMWare Workstation Pro
+  - Download VMWare Workstation Pro 25H2 once you have logged in from the Broadcom website
+  - This was a refurbished PC with a fresh Winodws install so no preexisting setting.  I did not have HyperV, Windows Hypervisor Platform(WHP) or Virtual Machine(VMP) enabled so I was able to use the native VMWare hypervisor
+  - To help with performance I also disabled Memory Integrity, which relies on WHP and can lead to sluggishness
