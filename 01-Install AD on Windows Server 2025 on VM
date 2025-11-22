@@ -17,5 +17,8 @@
   - Select Windows Server 2022 Standard Evaluation (Desktop Experience)
   - Set your password
 
-
+5. Install Active Directory
+  - Click Manage in Server Manager and click Add Roles and Features
+  - Click Role-based installation
+  - Select Active Domain Services, DNS Server and 
 
