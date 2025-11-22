@@ -3,7 +3,7 @@
   - Disable HyperV, Windows Hypervisor Platform(WHP) and Virtual Machine(VMP).  Disable Memory Integrity.  This is to run native VMWare hypervisor
   * When running systeminfo I still received Virtualizatiob-based security status:Running and App Control for Business Policy: Enforced.  I decided to install you Windows Hypervisor Platform
 
-2. Download and Install Windows Server 2022
+2. Download Windows Server 2022
   - Download the Windows Server 2022 ISO file from Microsoft Evaluation Center (I chose to use Windows Server 2022 over Windows Server 2025 because it is widely deployed and has more tutorials online)
   
 3. Create a new Virtual Machine
@@ -12,6 +12,10 @@
   - Memory: 2 GB
   - Processors: 2
  
-4. Load the ISO file from the VM settings
-  - Make sure to click Load from CD/DVD
+4. Load the Windows Server 2025 ISO file from the VM settings
+  - Make sure to Press any key to boot from CD/DVD
+  - Select Windows Server 2022 Standard Evaluation (Desktop Experience)
+  - Set your password
+
+
 
