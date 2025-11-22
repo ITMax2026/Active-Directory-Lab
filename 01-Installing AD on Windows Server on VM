@@ -3,7 +3,10 @@
   - This was a refurbished PC with a fresh Winodws install so no preexisting setting.  I did not have HyperV, Windows Hypervisor Platform(WHP) or Virtual Machine(VMP) enabled so I was able to use the native VMWare hypervisor
   - To help with performance I also disabled Memory Integrity, which relies on WHP and can lead to sluggishness
 
-2. Download and Install Windows Server 2022 (I chose to use Windows Server 2022 over Windows
-  - Download
+2. Download and Install Windows Server 2022
+  - Download the Windows Server 2022 ISO file from Microsoft Evaluation Center (I chose to use Windows Server 2022 over Windows Server 2025 because it is widely deployed and has more tutorials online)
+  
+3. Create a new Virtual Machine
+  - 
 
-3. 
+4. 
