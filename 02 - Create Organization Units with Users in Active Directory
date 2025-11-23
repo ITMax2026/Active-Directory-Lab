@@ -1,5 +1,7 @@
 Scenario: Simulate a sample organization called 'Demo Corp'
 
+Part 1 - Create Sample 'Org Chart'
+
 1. Open Active Directory Users and Computers (ADUC)
 2. Right click the domain name (ad.lab)
 3. Select New > Organization Unit > Name it DemoCorp_Root
@@ -7,3 +9,23 @@ Scenario: Simulate a sample organization called 'Demo Corp'
   - Admin_Department (for IT Staff)
   - General_Staff (for HR, Sales)
   - Workstations (for Computers
+
+Part 2 - Create the Users
+  - I will use two contrasting users; one with admin power(Admin) and one who is restricted (Staff)
+
+1. Create a Restricted User
+  - Right click General_Staff OU > New > User
+    - First Name: John 
+    - Last Name: HR
+    - User login: jhr
+    - Password: Password123
+
+2. Create an Admin 
+  - Right click Admin_Department OU > New > User
+    - First Name:  Jeff
+    - Last Name: Admin
+    - User login: jadmin
+    -Password: Password123
+  - Right click Jeff Admin > Properties > Member of tab > Add.  Type Domain Admins and click check names and then Apply > OK
+    - Jeff is now a domain admin
+
