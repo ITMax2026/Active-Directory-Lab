@@ -15,4 +15,18 @@ GPO #1: An Acceptable User Policy Banner (Applies to everyone)
 
 
 GPO #2: Control Panel Lockout (Applies only to Staff)
-  - Jeff (Admin) can access control panel/settings, but John (
+  - Jeff (Admin) can access control panel/settings, but John (HR) should be locked out
+
+1. Right click General_Staff OU > Create a GPO in this domain, and Link it here..
+2. Name: Staff_Restrict_ControlPanel
+3. Right Click Edit
+4. Navigate to: User Configuration > Policies > Administrative_Templates > Control Panel
+5. Double-click Prohibit access to Control Panel and PC Settings
+6. Select Enabled towards the top > Select Apply > Ok (On the policy in the folder you should see the label switch from Not Configured to Enabled)
+
+
+Review Work:
+I have no staged two GPOs which are ready for a client machine.  Logic is:
+
+1. Any computer that joins the domain and is moved into DemoCorp_Root will get the AUP popup
+2. Users that join the General_Staff OU will have a restricted control panal policy applied and will be blocked from accessing settings
