@@ -17,6 +17,15 @@
   - Select Windows Server 2022 Standard Evaluation (Desktop Experience)
   - Set your password
 
+5. Prerequisates for installing new Active Directory Forest
+- Set static IP Address
+  - Go to Network & Internet > Change adapter options > Right click adapter > Properties > Click IPv4 and select Properties
+- Run ipconfig to get VM configuration and use results to fill out following section
+- Click Use the following IP adddres:
+  - IP address: 192.168.242.128
+  - Subnet mask: 255.255.255.0
+  - Default gateway: 192.168.242.2
+
 5. Install Active Directory
   - Click Manage in Server Manager and click Add Roles and Features
   - Click Role-based installation
