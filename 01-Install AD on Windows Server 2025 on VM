@@ -56,3 +56,5 @@
     - Server Manager > Tools > DNS
     - There should be two Forward Lookup Zones: one for _msdcs.ad.lab and one for ad.lab
     - For further validation run dcdiag in powershell and look for mostly "passed test" and warnings.  You don't want errors
+
+The Windowser Server 2022 running on VMWare Workstation Pro is no a functioning Domain Controller.  Next we will begin creating Active Direcotry Users and Computers, working with Organizations Units and joining other PCs
