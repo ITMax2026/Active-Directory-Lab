@@ -37,3 +37,6 @@ Part 5 - Join the Domain
   1. System > About > click Domain or Workgroup
   2. Click Change to Rename this computer of change its domain or workgroup
   3. Click Member of: Domain > Fill in ad.lab > Fill in Username: Administrator and Password
+  4. Restart computer
+
+
