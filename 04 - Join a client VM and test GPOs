@@ -18,3 +18,18 @@ Part 3 - Install Winodws 11
   3. Select Sign-in options > Domain join instead
   4. Who's going to use this device: LocalAdmin, Password: Password123
   5. Complete privacy questions and finish
+  6. If you missed device rename, click Settings > System > Rename > Chose Client-01
+
+Part 4 - Configure Networking and Join Domain
+  1. Check connectivity:
+    - Open Terminal > Type ping 192.168.242.10 (The Domain Controller IP) - If you get pings you have basic network connectivity
+  2. Set DNS
+    - On the VM press Windows Key + R > type ncpa.cpl (opens Network Connections)
+    - Right click Ethernet0 > Properties
+    - Select Internet Protocol Version 4 (TCP/IP) > Properties
+    - IP Address: Keep 'Obtain Automatically'
+    - DNS Server: 
+      - Select 'Use the following DNS server addresses' > Preferred: 192.168.242.10  > Close
+
+Part 5 - Join the Domain
+  1. System 
