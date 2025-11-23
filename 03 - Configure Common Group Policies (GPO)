@@ -26,7 +26,7 @@ GPO #2: Control Panel Lockout (Applies only to Staff)
 
 
 Review Work:
-I have no staged two GPOs which are ready for a client machine.  Logic is:
+I have now staged two GPOs which are ready for a client machine.
 
 1. Any computer that joins the domain and is moved into DemoCorp_Root will get the AUP popup
 2. Users that join the General_Staff OU will have a restricted control panal policy applied and will be blocked from accessing settings
