@@ -1,2 +1,9 @@
 Part 1: Get the Windows 11 ISO
-  1. 
+  1. Go to the Microsoft Evaluation Center 
+  2. Downlaod the Winodws 11 Enterprise ISO
+
+
+Part 2: Create the Virtual Machine in VMWare
+  1. In VMWare Workstation Pro click File > New Virtual Machine
+  2. Select Typical > Select Installer disc image file (ISO) - I don't have much experience with VMWare and wanted to try the simplier/auto install as opposed to the more custom install I did with the server.
+  3. 
