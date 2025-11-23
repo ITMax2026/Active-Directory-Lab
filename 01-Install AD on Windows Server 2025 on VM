@@ -1,7 +1,7 @@
 1. Download and Install VMWare Workstation Pro
   - Download VMWare Workstation Pro 25H2 once you have logged in from the Broadcom website
-  - Disable HyperV, Windows Hypervisor Platform(WHP) and Virtual Machine(VMP).  Disable Memory Integrity.  This is to run native VMWare hypervisor
-  * When running systeminfo I still received Virtualizatiob-based security status:Running and App Control for Business Policy: Enforced.  I decided to install you Windows Hypervisor Platform
+  - Disable HyperV, Windows Hypervisor Platform(WHP) and Virtual Machine(VMP).  Disable Memory Integrity.  This is to run native VMWare hypervisor for better performance
+  * When running systeminfo I still received Virtualizatiob-based security status:Running and App Control for Business Policy: Enforced.  I decided to install with Windows Hypervisor Platform
 
 2. Download Windows Server 2022
   - Download the Windows Server 2022 ISO file from Microsoft Evaluation Center (I chose to use Windows Server 2022 over Windows Server 2025 because it is widely deployed and has more tutorials online)
@@ -17,14 +17,16 @@
   - Select Windows Server 2022 Standard Evaluation (Desktop Experience)
   - Set your password
 
-5. Prerequisates for installing new Active Directory Forest
-- Set static IP Address
-  - Go to Network & Internet > Change adapter options > Right click adapter > Properties > Click IPv4 and select Properties
-- Run ipconfig to get VM configuration and use results to fill out following section
-- Click Use the following IP adddres:
-  - IP address: 192.168.242.128
-  - Subnet mask: 255.255.255.0
-  - Default gateway: 192.168.242.2
+5. Prerequisites for installing new Active Directory Forest
+  - Set static IP Address
+    - Go to Network & Internet > Change adapter options > Right click adapter > Properties > Click IPv4 and select Properties
+  - Run ipconfig to get VM configuration and use results to fill out following section
+  - Click Use the following IP adddres:
+    - IP address: 192.168.242.128 
+    - Subnet mask: 255.255.255.0
+    - Default gateway: 192.168.242.2
+  - Click Use the following DNS server addresses: 
+    -Preferred DNS server: 192.168.242.128 (points the server to itself for DNS - I did something similar in the Azure setup where we pointed the pointed the VLAN DNS to the VM static IP)
 
 5. Install Active Directory
   - Click Manage in Server Manager and click Add Roles and Features
