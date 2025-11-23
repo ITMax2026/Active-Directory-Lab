@@ -17,19 +17,23 @@
   - Select Windows Server 2022 Standard Evaluation (Desktop Experience)
   - Set your password
 
-5. Prerequisites for installing new Active Directory Forest
+5. Prerequisites for installing new Active Directory Forest:
   - Set static IP Address
     - Go to Network & Internet > Change adapter options > Right click adapter > Properties > Click IPv4 and select Properties
-  - Run ipconfig to get VM configuration and use results to fill out following section
-  - Click Use the following IP adddres:
-    - IP address: 192.168.242.128 
-    - Subnet mask: 255.255.255.0
-    - Default gateway: 192.168.242.2
-  - Click Use the following DNS server addresses: 
-    -Preferred DNS server: 192.168.242.128 (points the server to itself for DNS - I did something similar in the Azure setup where we pointed the pointed the VLAN DNS to the VM static IP)
+    - Run ipconfig to get VM configuration and use results to fill out following section
+    - Click Use the following IP adddres:
+      - IP address: 192.168.242.10 
+      - Subnet mask: 255.255.255.0
+      - Default gateway: 192.168.242.2
+    - Click Use the following DNS server addresses: 
+    -  Preferred DNS server: 192.168.242.10 (points the server to itself for DNS - I did something similar in the Azure setup where we pointed the pointed the VLAN DNS to the VM static IP)
+  - Name the server:
+    - Go to System > About > Rename this PC
+      - Set it to DC01
 
-5. Install Active Directory
+6. Install Active Directory
   - Click Manage in Server Manager and click Add Roles and Features
   - Click Role-based installation
-  - Select Active Domain Services, DNS Server and 
+  - Select Active Directory Domain Services > click Add Features
+
 
