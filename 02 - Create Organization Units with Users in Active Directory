@@ -1,0 +1,9 @@
+Scenario: Simulate a sample organization called 'Demo Corp'
+
+1. Open Active Directory Users and Computers (ADUC)
+2. Right click the domain name (ad.lab)
+3. Select New > Organization Unit > Name it DemoCorp_Root
+4. Right click the new DemoCorp_Root folder and create three sub-OUs:
+  - Admin_Department (for IT Staff)
+  - General_Staff (for HR, Sales)
+  - Workstations (for Computers
