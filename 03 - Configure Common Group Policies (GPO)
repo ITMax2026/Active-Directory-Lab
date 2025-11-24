@@ -10,7 +10,7 @@ GPO #1: An Acceptable User Policy Banner (Applies to everyone)
 4. Navigate to: Computer Configuration > Policies > Winodws Settings > Security Settings > Local Policies > Security Options
 5. Edit these two settings:
     - Interactive logon: Message title for users attempting to log on. Set this to: 'Security Warning'
-    - Interactive logon: Message text for users attempting to log on. Set this to: 'This system if for authorized use only.  Users much obey the Accecptable Use Policty'
+    - Interactive logon: Message text for users attempting to log on. Set this to: 'This system is for authorized use only.  Users much obey the Accecptable Use Policty'
 6. Click OK and close the editor
 
 
