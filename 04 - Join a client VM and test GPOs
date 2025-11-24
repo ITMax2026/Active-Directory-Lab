@@ -39,7 +39,14 @@ Part 5 - Join the Domain
   3. Click Member of: Domain > Fill in ad.lab > Fill in Username: Administrator and Password
   4. Restart computer
 
-Part 6 - Test the Lab
+Part 6 - Move Client-01 into DemoCorp_Root OU
+  - When the Winodws 11 VM joins the domain, Active Directory puts the Client-01 object into the default computers container.
+  - However, the login GPO is linked to the DemoCorp_Root OU.  The default computers container is outside the OU so the policy doesn't apply to the VM
+  1. Open Active Directory Users and Computers
+  2. Open the Computers container > Drag Client-01 into the Workstations subOU, which is inside the DemoCorp_Root OU
+  3. On the client open Command Prompt > type gpupdate /force > wait for it to say 'Computer policy update has completed successfully
+
+Part 7 - Test the Lab
   1. Click other user on the login screen
   2. Type jhd and Password123
   3. 
