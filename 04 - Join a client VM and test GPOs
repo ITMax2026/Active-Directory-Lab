@@ -49,4 +49,4 @@ Part 6 - Move Client-01 into DemoCorp_Root OU
 Part 7 - Test the Lab
   1. Click other user on the login screen
   2. Type jhd and Password123
-  3. Success Indicator:  If you see 'Security Warning: 
+  3. Success Indicator:  If you see 'Security Warning: This system if for authorized use only.  Users much obey the Accecptable Use Policty' popup the Active Directory lab is fully functional.
