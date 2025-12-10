@@ -1,6 +1,6 @@
 1. Download and Install VMWare Workstation Pro
   - Download VMWare Workstation Pro 25H2 once you have logged in from the Broadcom website
-  * I install with Windows Hypervisor Platform
+  * I installed with Windows Hypervisor Platform
 
 2. Download Windows Server 2022
   - Download the Windows Server 2022 ISO file from Microsoft Evaluation Center (I chose to use Windows Server 2022 over Windows Server 2025 because it is widely deployed and has more tutorials online)
