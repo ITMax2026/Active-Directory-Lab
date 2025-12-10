@@ -3,7 +3,7 @@
         1. Restart the Windows 11 client VM
         2. Before you type a password, you should see the pop-up: "Security Warning: This system is for authorized use only"
      
-           ![AUP Security Warning Screenshot](images/aup-security-warning.png)
+           ![AUP Security Warning Screenshot](images/05-aup-security-warning.png)
 
         3. Success: Click OK.
 
