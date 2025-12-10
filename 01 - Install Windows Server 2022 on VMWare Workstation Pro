@@ -26,8 +26,11 @@
   3. On the right, select Use ISO image file > browse and select the Windows Server 2022 ISO file
   4. Click OK
 
-5. Load the Windows Server 2025 ISO file from the VM settings
-  - Make sure to Press any key to boot from CD/DVD
-  - Select Windows Server 2022 Standard Evaluation (Desktop Experience)
-  - Set your password
+5. Start the Windows Server 2022 VM
+  1. Make sure to Press any key to boot from CD/DVD
+  2. Next > Install Now
+  3. Select Windows Server 2022 Standard Evaluation (Desktop Experience)
+  4. Which type of installation do you want > Choose: Custom: Install Microsoft Server Operating System only (advanced)
+  5. Select the 60 GB Drive
+  6. Set your password
 
