@@ -37,7 +37,7 @@ Part 5 - Join the Domain
   3. Click Member of: Domain > Fill in ad.lab > Fill in Username: Administrator and Password
   4. Restart computer
 
-Part 6 - Move Client-01 into DemoCorp_Root OU
+Part 6 - Move Client-01 into Workstations OU
   - When the Winodws 11 VM joins the domain, Active Directory puts the Client-01 object into the default computers container.
   - However, the login GPO is linked to the Workstations OU.  The default computers container is outside the OU so the policy doesn't apply to the VM
   1. Open Active Directory Users and Computers
