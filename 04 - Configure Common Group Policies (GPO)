@@ -25,8 +25,8 @@ GPO #2: Control Panel Lockout (Applies only to Staff - will effect John and Jeff
 6. Select Enabled towards the top > Select Apply > Ok (On the policy in the folder you should see the label switch from Not Configured to Enabled)
 
 
-Review Work:
-I have now staged two GPOs which are ready for a client machine.
+Next Steps: (This is covered in part 5 as well)
+You have staged two GPOs, but for Part 5 (Testing) to work, you must remember GPO Application Rules:
+  New User rule: Since jhr is inside the General_Staff OU, the Control Panel block will apply to him immediately.
+  New Computer rule (Important): When you join a Client VM in the next step, it will default to the generic "Computers" folder. You will have to drag the object into your Workstations OU. 
 
-1. Any computer that joins the domain and is moved into DemoCorp_Root will get the AUP popup
-2. Users that join the General_Staff OU will have a restricted control panal policy applied and will be blocked from accessing settings
