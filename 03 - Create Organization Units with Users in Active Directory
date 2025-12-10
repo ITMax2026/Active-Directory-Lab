@@ -40,5 +40,5 @@ Part 3 - Create the Users
     -Password: Password123
   - Add to Group:
     - Right-click Jeff Admin > Properties > Member Of tab > Add > Type G_HR_Staff > OK  (For organizational tracking)  
-    - Right click Jeff Admin > Properties > Member of tab > Add.  Type Domain Admins  > OK  (For real admin priviledges)
+    - Right click Jeff Admin > Properties > Member of tab > Add > Type Domain Admins  > OK  (For real admin priviledges)
 
