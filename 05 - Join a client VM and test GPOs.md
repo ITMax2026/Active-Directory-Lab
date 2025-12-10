@@ -47,8 +47,10 @@
     - **Test 1: AUP Banner (Computer policy)**
         1. Restart the Windows 11 client VM
         2. Before you type a password, you should see the pop-up: "Security Warning: This system is for authorized use only"
-        3. Success: Click OK.
-        ![AUP Security Warning Screenshot](./aup-security-warning.png)
+     
+           ![AUP Security Warning Screenshot](./aup-security-warning.png)
+
+        4. Success: Click OK.
 
     - **Test 2: Control Panel Lockout - (User Policy)**
         1. Log in as: jhr (The Restricted User).
