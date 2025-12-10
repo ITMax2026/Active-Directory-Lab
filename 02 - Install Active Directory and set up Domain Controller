@@ -1,5 +1,5 @@
 1. Prerequisites for installing new Active Directory Forest:
-  1 Set static IP Address
+  1. Set static IP Address
     - Run ipconfig to get VM configurations and note your IPv4 Address, Subnet Mask, and Default Gateway.  (You will use these to fill out following section)
     - Go to Control Panel > Network & Internet > Network and Sharing Center > Change adapter settings > Right click adapter > Properties > Click IPv4 and select Properties
     - Click Use the following IP adddres:
@@ -8,28 +8,31 @@
       - Default gateway: 192.168.242.2 - Make sure this matches the gateway found in the ipconfig check earlier 
     - Click Use the following DNS server addresses: 
       - Preferred DNS server: 192.168.242.10 (points the server to itself for DNS)
-  - Name the server:
+  2. Name the server:
     - Go to System > About > Rename this PC
       - Set it to DC01
 
 2. Install Active Directory
-  - Open Server Manager
-  - Click Manage and click Add Roles and Features
-  - Click Role-based installation
-  - Select Active Directory Domain Services > click Add Features
+  1. Open Server Manager
+  2. Click Manage and click Add Roles and Features
+  3. Click Role-based installation
+  4. Click Next until you reach Server Roles.
+  5. Select Active Directory Domain Services > click Add Features
+  6. Click Next through the rest of the wizard and click Install.
+
 
 3. Promote Server to Domain Controller
-  - In Server Mananger click the yellow flag > click Promote this server to domain controller
-  - Deployment configuration:
+  1. In Server Mananger click the yellow flag > click Promote this server to domain controller
+  2. Deployment configuration:
     - Add a new forest
     - Root domain name: ad.lab
-  - Domain controller options:
+  3. Domain controller options:
     - Windows Server 2016
     - Check: Domain Name System (DNS) server and Global Catalog
     - Set a Directory Services Restore Mode (DSRM) password
-  - DNS Options: You can safely ignore the warning "A delegation for this DNS server cannot be created." This is normal for a new root domain.
-  - NetBIOS domain name:  should autopopulate and you can leave as default.  In my case AD
-  - Click through and install
+  4. DNS Options: You can safely ignore the warning "A delegation for this DNS server cannot be created." This is normal for a new root domain.
+  5. NetBIOS domain name:  should autopopulate and you can leave as default.  In my case AD
+  6. Click through and install
 
 4. Post Promotion Checks
   - Your log in name should have changed to your domain account.  In my case AD/Administrator
