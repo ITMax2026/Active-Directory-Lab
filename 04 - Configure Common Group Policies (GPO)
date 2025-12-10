@@ -1,11 +1,11 @@
 Open Group Policy Management (Server Manager > Tools)
 Expand Forest ad.lab > Domains > ad.lab > DemoCorp_Root
 
-GPO #1: An Acceptable User Policy Banner (Applies to everyone)
-  - Standard corporate policy that shows an acceptable use policy warning before anyone logs in
+GPO #1: Acceptable Use Policy Banner (Computer Policy)
+  Concept: This applies to the computer, regardless of who logs in.  The Computer object much be inside the Workstations OU
 
-1. Right click DemoCorp_Root and select Create a GPO in this domain, and Link it here...
-2. Name it: All_Company_AUP
+1. Right click Workstations OU (inside of the DemoCorp_Root) and select Create a GPO in this domain, and Link it here...
+2. Name it: PC_Workstation_AUP
 3. Right click the new policy and select Edit
 4. Navigate to: Computer Configuration > Policies > Winodws Settings > Security Settings > Local Policies > Security Options
 5. Edit these two settings:
@@ -14,11 +14,11 @@ GPO #1: An Acceptable User Policy Banner (Applies to everyone)
 6. Click OK and close the editor
 
 
-GPO #2: Control Panel Lockout (Applies only to Staff)
-  - Jeff (Admin) can access control panel/settings, but John (HR) should be locked out
+GPO #2: Control Panel Lockout (Applies only to Staff - will effect John and Jeff differently)
+  Concept:  This applies to the users (Staff), regardless of which computer they use
 
 1. Right click General_Staff OU > Create a GPO in this domain, and Link it here..
-2. Name: Staff_Restrict_ControlPanel
+2. Name: U_Staff_Restrict_ControlPanel
 3. Right Click Edit
 4. Navigate to: User Configuration > Policies > Administrative_Templates > Control Panel
 5. Double-click Prohibit access to Control Panel and PC Settings
