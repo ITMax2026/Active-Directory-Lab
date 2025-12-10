@@ -1,13 +1,13 @@
 1. Prerequisites for installing new Active Directory Forest:
-  - Set static IP Address
-    - Go to Network & Internet > Change adapter options > Right click adapter > Properties > Click IPv4 and select Properties
-    - Run ipconfig to get VM configuration and use results to fill out following section
+  1 Set static IP Address
+    - Run ipconfig to get VM configurations and note your IPv4 Address, Subnet Mask, and Default Gateway.  (You will use these to fill out following section)
+    - Go to Control Panel > Network & Internet > Network and Sharing Center > Change adapter settings > Right click adapter > Properties > Click IPv4 and select Properties
     - Click Use the following IP adddres:
-      - IP address: 192.168.242.10 
+      - IP address: 192.168.242.10 - you can set as your desired static IP
       - Subnet mask: 255.255.255.0
-      - Default gateway: 192.168.242.2
+      - Default gateway: 192.168.242.2 - Make sure this matches the gateway found in the ipconfig check earlier 
     - Click Use the following DNS server addresses: 
-    -  Preferred DNS server: 192.168.242.10 (points the server to itself for DNS - I did something similar in the Azure setup where we pointed the pointed the VLAN DNS to the VM static IP)
+      - Preferred DNS server: 192.168.242.10 (points the server to itself for DNS)
   - Name the server:
     - Go to System > About > Rename this PC
       - Set it to DC01
