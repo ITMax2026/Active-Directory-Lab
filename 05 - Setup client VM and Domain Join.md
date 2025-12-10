@@ -1,9 +1,3 @@
-Here is the text from your file, completely reformatted to match the professional style we established.
-
-***
-
-# Client Setup & Domain Join
-
 ## 1. Acquire Installation Media
 1.  Navigate to the **Microsoft Evaluation Center**.
 2.  Download the **Windows 11 Enterprise ISO**.
