@@ -49,7 +49,9 @@ Part 7 - Test the Lab
     1. Restart the Winodws 11 client VM
       - Before you type a password, you should see the pop-up: "Security Warning: This system is for authorized use only"
       - Success: Click OK.
+    ![AUP Security Warning Screenshot](./aup-security-warning.png)
 
+    
   Test 2: Control Panel Lockout - (User Policy)
     1. Log in as: jhr (The Restricted User).
     2. Once logged in, right-click the Start Button and try to open Settings or search for Control Panel.
