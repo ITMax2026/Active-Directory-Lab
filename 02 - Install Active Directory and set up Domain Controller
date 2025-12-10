@@ -1,5 +1,4 @@
-
-5. Prerequisites for installing new Active Directory Forest:
+1. Prerequisites for installing new Active Directory Forest:
   - Set static IP Address
     - Go to Network & Internet > Change adapter options > Right click adapter > Properties > Click IPv4 and select Properties
     - Run ipconfig to get VM configuration and use results to fill out following section
@@ -13,13 +12,13 @@
     - Go to System > About > Rename this PC
       - Set it to DC01
 
-6. Install Active Directory
+2. Install Active Directory
   - Open Server Manager
   - Click Manage and click Add Roles and Features
   - Click Role-based installation
   - Select Active Directory Domain Services > click Add Features
 
-7. Promote Server to Domain Controller
+3. Promote Server to Domain Controller
   - In Server Mananger click the yellow flag > click Promote this server to domain controller
   - Deployment configuration:
     - Add a new forest
@@ -32,7 +31,7 @@
   - NetBIOS domain name:  should autopopulate and you can leave as default.  In my case AD
   - Click through and install
 
-8. Post Promotion Checks
+4. Post Promotion Checks
   - Your log in name should have changed to your domain account.  In my case AD/Administrator
   - Verify DNS
     - Server Manager > Tools > DNS
