@@ -1,25 +1,31 @@
 1. Download and Install VMWare Workstation Pro
-  - Download VMWare Workstation Pro 25H2 once you have logged in from the Broadcom website
-  * I installed with Windows Hypervisor Platform
+  1. Download VMWare Workstation Pro 25H2 once you have logged in from the Broadcom website
+    * I installed with Windows Hypervisor Platform
 
 2. Download Windows Server 2022
-  - Download the Windows Server 2022 ISO file from Microsoft Evaluation Center (I chose to use Windows Server 2022 over Windows Server 2025 because it is widely deployed and has more tutorials online)
+  1. Download the Windows Server 2022 ISO file from Microsoft Evaluation Center (I chose to use Windows Server 2022 over Windows Server 2025 because it is widely deployed and has more tutorials online)
   
 3. Create a new Virtual Machine
-  - File > New Virtual Machine
-  - Configuration Type: Typical (recommended)
-  - Guest Operating System Installtion: 
+  1. File > New Virtual Machine
+  2. Configuration Type: Typical (recommended)
+  3. Guest Operating System Installtion: 
     - Select: I will install the operating system later (Note:  Selecting Installer disc image file (iso) can lead to VMWare 'Easy Install' which asks for a product key on the next screen)
-  - Select a Guest Operating System:
+  4. Select a Guest Operating System:
     - Select Microsoft Winodws and Windows Server 2022
-  - Virtual Machine Name: Windows Server 2022
-  - Specify disk capacity: 
+  5. Virtual Machine Name: Windows Server 2022
+  6. Specify disk capacity: 
     - Maximum disk size: 60 GB is recommended for Windows Server 2022
     - Select: Split virtual disk into multiple files
-  - Ready to Create  Virtual Machine: (I used the default Memory and CPU settings)
+  7. Ready to Create  Virtual Machine: (I used the default Memory and CPU settings)
     - Memory: 2048 MB
     - 2 CPU cores
- 
+
+4. Attach the ISO Manually
+  1. Click on the new Winodws Server 2022 VM > Click Edit Virtual Machine Setting at the top
+  2. Select CD/DVD (SATA) 
+  3. On the right, select Use ISO image file > browse and select the Windows Server 2022 ISO file
+  4. Click OK
+
 4. Load the Windows Server 2025 ISO file from the VM settings
   - Make sure to Press any key to boot from CD/DVD
   - Select Windows Server 2022 Standard Evaluation (Desktop Experience)
