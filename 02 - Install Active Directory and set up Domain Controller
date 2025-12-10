@@ -1,0 +1,40 @@
+
+5. Prerequisites for installing new Active Directory Forest:
+  - Set static IP Address
+    - Go to Network & Internet > Change adapter options > Right click adapter > Properties > Click IPv4 and select Properties
+    - Run ipconfig to get VM configuration and use results to fill out following section
+    - Click Use the following IP adddres:
+      - IP address: 192.168.242.10 
+      - Subnet mask: 255.255.255.0
+      - Default gateway: 192.168.242.2
+    - Click Use the following DNS server addresses: 
+    -  Preferred DNS server: 192.168.242.10 (points the server to itself for DNS - I did something similar in the Azure setup where we pointed the pointed the VLAN DNS to the VM static IP)
+  - Name the server:
+    - Go to System > About > Rename this PC
+      - Set it to DC01
+
+6. Install Active Directory
+  - Open Server Manager
+  - Click Manage and click Add Roles and Features
+  - Click Role-based installation
+  - Select Active Directory Domain Services > click Add Features
+
+7. Promote Server to Domain Controller
+  - In Server Mananger click the yellow flag > click Promote this server to domain controller
+  - Deployment configuration:
+    - Add a new forest
+    - Root domain name: ad.lab
+  - Domain controller options:
+    - Windows Server 2016
+    - Check: Domain Name System (DNS) server and Global Catalog
+    - Set a Directory Services Restore Mode (DSRM) password
+  - DNS Options: You can safely ignore the warning "A delegation for this DNS server cannot be created." This is normal for a new root domain.
+  - NetBIOS domain name:  should autopopulate and you can leave as default.  In my case AD
+  - Click through and install
+
+8. Post Promotion Checks
+  - Your log in name should have changed to your domain account.  In my case AD/Administrator
+  - Verify DNS
+    - Server Manager > Tools > DNS
+    - There should be two Forward Lookup Zones: one for _msdcs.ad.lab and one for ad.lab
+    - For further validation run dcdiag in powershell and look for mostly "passed test" and warnings.  You don't want errors
