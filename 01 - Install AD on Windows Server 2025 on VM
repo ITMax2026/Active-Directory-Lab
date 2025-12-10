@@ -10,10 +10,15 @@
   - Configuration Type: Typical (recommended)
   - Guest Operating System Installtion: 
     - Select: I will install the operating system later (Note:  Selecting Installer disc image file (iso) can lead to VMWare 'Easy Install' which asks for a product key on the next screen)
-  - Click: 
-  - Hard Disk: 20 GB
-  - Memory: 2 GB
-  - Processors: 2
+  - Select a Guest Operating System:
+    - Select Microsoft Winodws and Windows Server 2022
+  - Virtual Machine Name: Windows Server 2022
+  - Specify disk capacity: 
+    - Maximum disk size: 60 GB is recommended for Windows Server 2022
+    - Select: Split virtual disk into multiple files
+  - Ready to Create  Virtual Machine: (I used the default Memory and CPU settings)
+    - Memory: 2048 MB
+    - 2 CPU cores
  
 4. Load the Windows Server 2025 ISO file from the VM settings
   - Make sure to Press any key to boot from CD/DVD
