@@ -16,7 +16,7 @@ Expand **Forest: ad.lab** > **Domains** > **ad.lab** > **DemoCorp**.
         *   Set this to: `This system is for authorized use only. Users must obey the Acceptable Use Policy`
 6.  Click **OK** and close the editor.
 
-![AUP Policy Configuration](images/aup-policy-banner.png)
+![AUP Policy Configuration](images/04-aup-policy-banner.png)
 
 ## GPO #2: Control Panel Lockout (User Policy)
 *Concept: This applies to the users (Staff), regardless of which computer they use. This will affect John and Jeff differently.*
@@ -29,7 +29,7 @@ Expand **Forest: ad.lab** > **Domains** > **ad.lab** > **DemoCorp**.
 6.  Select **Enabled** towards the top > Select **Apply** > **OK**.
     *   *Verification: On the policy in the folder, you should see the label switch from "Not Configured" to "Enabled".*
 
-![Control Panel Restriction](images/control-panel-lockout.png)
+![Control Panel Restriction](images/04-control-panel-lockout.png)
 
 ## Next Steps
 
