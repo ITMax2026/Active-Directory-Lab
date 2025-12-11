@@ -28,9 +28,8 @@ Expand **Forest: ad.lab** > **Domains** > **ad.lab** > **DemoCorp_Root**.
     *   *Verification: On the policy in the folder, you should see the label switch from "Not Configured" to "Enabled".*
 
 ## Next Steps
-*You have staged two GPOs, but for Part 5 (Testing) to work, you must remember GPO Application Rules:*
 
-> **⚠️ Important GPO Rules:**
+> ** Important GPO Rules:**
 >
 > *   **New User Rule:** Since `jhr` is inside the `General_Staff` OU, the Control Panel block will apply to him immediately.
 > *   **New Computer Rule:** When you join a Client VM in the next step, it will default to the generic "Computers" folder. You will have to drag the object into your **Workstations** OU for the policy to apply.
