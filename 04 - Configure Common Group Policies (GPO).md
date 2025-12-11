@@ -1,6 +1,6 @@
 **Prerequisite:** Open **Group Policy Management** (**Server Manager** > **Tools**).
 
-Expand **Forest: ad.lab** > **Domains** > **ad.lab** > **DemoCorp_Root**.
+Expand **Forest: ad.lab** > **Domains** > **ad.lab** > **DemoCorp**.
 
 ## GPO #1: Acceptable Use Policy Banner (Computer Policy)
 *Concept: This applies to the computer, regardless of who logs in. The Computer object must be inside the Workstations OU.*
