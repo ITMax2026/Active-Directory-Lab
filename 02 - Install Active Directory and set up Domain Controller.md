@@ -10,6 +10,9 @@
       *   **Default gateway:** `192.168.242.2` *(Make sure this matches the gateway found in the ipconfig check earlier)*.
   5.  Click **Use the following DNS server addresses**:
       *   **Preferred DNS server:** `192.168.242.10` *(Points the server to itself for DNS)*.
+    
+  ![Static IP](images/02-static-ip.png)
+
   
   ### Name the Server
   1.  Go to **System** > **About** > **Rename this PC**.
@@ -45,11 +48,15 @@
 **Login Verification:**
 Your log in name should have changed to your domain account (In my case `AD\Administrator`).
 
+![Domain Login Screen](images/02-domain-login.png)
+
 ### Verify DNS
 Open Command Prompt and run the following command:
 ```cmd
 nslookup ad.lab
 ```
+
+![NSLookup Success](images/02-nslookup-verify.png)
 
 > **✅ Success Criteria:**
 > It should return the IP address of your server (`192.168.242.10`).
@@ -59,6 +66,8 @@ nslookup ad.lab
 1.  Open **Server Manager** > **Tools** > **Active Directory Users and Computers**.
 2.  Ensure your domain `ad.lab` is visible.
 3.  Browse the **Domain Controllers** OU.
+
+![ADUC Domain Controller OU](images/02-aduc-dc-verify.png)
 
 > **✅ Success Criteria:**
 > You should see `DC01` listed inside the Domain Controllers OU.
