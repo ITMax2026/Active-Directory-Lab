@@ -1,7 +1,7 @@
 ## 1. Test AUP Banner (Computer Policy)
 
 1. Restart the **Windows 11 client VM**.
-2. Before you type a password, you should see the pop-up: *"Security Warning: This system is for authorized use only"*.
+2. Before you type a password, you should see the pop-up: *"Security Warning: This system is for authorized use only.  Users must obey the Acceptable Use Policy"*.
 
 [![AUP Security Warning Screenshot](images/06-aup-security-warning.png)](images/06-aup-security-warning.png)
 
