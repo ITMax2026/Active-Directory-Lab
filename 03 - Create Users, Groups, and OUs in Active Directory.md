@@ -10,6 +10,8 @@
     *   `General_Staff` *(for HR, Sales)*
     *   `Workstations` *(for Computers)*
     *   `Groups`
+  
+![AD Structure Tree](images/ad-ou-structure.png)
 
 ## Part 2: Create the Groups
 1.  Right-click the **Groups** OU > **New** > **Group**.
@@ -20,6 +22,8 @@
     *   **Group Name:** `G_IT_Admins`
     *   **Scope:** Global
     *   **Type:** Security
+
+![Security Groups List](images/ad-security-groups.png)
 
 ## Part 3: Create the Users
 *I will use two contrasting users; one with admin power (Admin) and one who is restricted (Staff).*
@@ -34,6 +38,7 @@
     *   Right-click **John HR** > **Properties** > **Member Of** tab > **Add**.
     *   Type `G_HR_Staff` > **OK**.
 
+
 ### 2. Create an Admin
 1.  Right-click the **Admin_Department** OU > **New** > **User**.
     *   **First Name:** `Jeff`
@@ -44,3 +49,6 @@
     *   Right-click **Jeff Admin** > **Properties** > **Member Of** tab > **Add**.
     *   Type `G_HR_Staff` > **OK**. *(For organizational tracking)*.
     *   Repeat the steps above and add: `Domain Admins` > **OK**. *(For real admin privileges)*.
+
+![Jeff Admin Group Membership](images/03-jeff-admin-group-member_of.png)
+
