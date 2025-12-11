@@ -14,14 +14,14 @@
 4.  Click **Finish**.
 
 ## 3. Install Windows 11
-1.  Start the VM. Click inside the black screen and press any key when prompted to **"boot from CD or DVD."**
+1.  When the VM starts, click inside the black screen and press a key on your keyboard when it says "Press any key to boot from CD or DVD.."
 2.  **Windows Setup flow:** Select **English** > Click through until you reach account sign-in.
 3.  Select **Sign-in options** > **Domain join instead**.
 4.  **Local Administrator Setup:**
     *   **User:** `LocalAdmin`
     *   **Password:** `Password123`
 5.  Complete privacy questions and finish setup.
-6.  *Optional:* If you missed the device rename step during setup, go to **Settings** > **System** > **Rename** and set the name to `Client-01`.
+6.  If you missed the device rename step during setup, go to **Settings** > **System** > **Rename** and set the name to `Client-01`.
 
 ## 4. Configure Networking
 ### Set DNS
