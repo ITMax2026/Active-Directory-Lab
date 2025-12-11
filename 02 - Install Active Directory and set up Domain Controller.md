@@ -11,7 +11,7 @@
   5.  Click **Use the following DNS server addresses**:
       *   **Preferred DNS server:** `192.168.242.10` *(Points the server to itself for DNS)*.
     
-  ![Static IP](images/02-static-ip.png)
+  ![Static IP](images/02-static-ip2.png)
 
   
   ### Name the Server
