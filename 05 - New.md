@@ -1,13 +1,3 @@
-Here is the content of **Section 6** rewritten to match the formatting style of **Section 5**.
-
-I have applied the following changes:
-*   Converted the main tests into **Numbered Headers** (e.g., `## 1. ...`).
-*   Formatted instructions as **Numbered Lists**.
-*   Applied **Bold** styling to UI elements (buttons, menus) and **Inline Code** styling to usernames.
-*   Converted "Success" notes into the **Success Criteria Blockquote** format used in the previous section.
-
-***
-
 ## 1. Test AUP Banner (Computer Policy)
 
 1. Restart the **Windows 11 client VM**.
