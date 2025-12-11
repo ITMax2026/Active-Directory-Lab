@@ -4,8 +4,8 @@
 1.  Open **Active Directory Users and Computers (ADUC)**.
 2.  Right-click the domain name (`ad.lab`).
 3.  Select **New** > **Organization Unit**.
-    *   Name it: `DemoCorp_Root`
-4.  Right-click the new **DemoCorp_Root** folder and create four sub-OUs:
+    *   Name it: `DemoCorp`
+4.  Right-click the new **DemoCorp** folder and create four sub-OUs:
     *   `Admin_Department` *(for IT Staff)*
     *   `General_Staff` *(for HR, Sales)*
     *   `Workstations` *(for Computers)*
@@ -28,7 +28,7 @@
 1.  Right-click the **General_Staff** OU > **New** > **User**.
     *   **First Name:** `John`
     *   **Last Name:** `HR`
-    *   **User login:** `jhr@ad.lab`
+    *   **User login:** `jhr`
     *   **Password:** `Password123`
 2.  **Add to Group:**
     *   Right-click **John HR** > **Properties** > **Member Of** tab > **Add**.
@@ -38,7 +38,7 @@
 1.  Right-click the **Admin_Department** OU > **New** > **User**.
     *   **First Name:** `Jeff`
     *   **Last Name:** `Admin`
-    *   **User login:** `jadmin@ad.lab`
+    *   **User login:** `jadmin`
     *   **Password:** `Password123`
 2.  **Add to Group:**
     *   Right-click **Jeff Admin** > **Properties** > **Member Of** tab > **Add**.
