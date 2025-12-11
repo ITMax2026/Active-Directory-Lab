@@ -1,4 +1,4 @@
-## 1. Acquire Installation Media
+## 1. Get Windows 11 ISO
 1.  Navigate to the **Microsoft Evaluation Center**.
 2.  Download the **Windows 11 Enterprise ISO**.
 
