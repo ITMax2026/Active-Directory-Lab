@@ -1,9 +1,3 @@
-Here is the text from your file, reformatted to match the professional Markdown style while keeping your original text intact.
-
-***
-
-# Windows 11 Client Setup & Domain Join
-
 ## 1. Get the Windows 11 ISO
 1.  Go to the **Microsoft Evaluation Center**.
 2.  Download the **Windows 11 Enterprise ISO**.
