@@ -1,9 +1,3 @@
-Here is the text from your file, reformatted to match the professional style while keeping your original text intact.
-
-***
-
-# Group Policy Configuration
-
 **Prerequisite:** Open **Group Policy Management** (**Server Manager** > **Tools**).
 Expand **Forest: ad.lab** > **Domains** > **ad.lab** > **DemoCorp_Root**.
 
