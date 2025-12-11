@@ -53,14 +53,13 @@ ping ad.lab
     *   **Credentials:** Use `Administrator` and your domain admin password.
 5.  **Restart** the computer when prompted.
 
-## 6. Move Client-01 to Workstations OU
+## 6. Move Client-01 into Workstations OU
 *Note: When a machine joins the domain, AD places it in the default "Computers" container. GPOs linked to specific OUs (like Workstations) will not apply until the object is moved.*
 
-1.  Log into your Server/Domain Controller.
-2.  Open **Active Directory Users and Computers**.
-3.  Open the **Computers** container.
-4.  Drag `Client-01` into the **Workstations** OU (Located inside `DemoCorp_Root`).
-5.  Return to the client machine (Client-01), open Command Prompt, and run:
+1.  Open **Active Directory Users and Computers**.
+2.  Open the **Computers** container.
+3.  Drag `Client-01` into the **Workstations** OU (Located inside `DemoCorp_Root`).
+4.  Return to the client machine (Client-01), open Command Prompt, and run:
     ```cmd
     gpupdate /force
     ```
