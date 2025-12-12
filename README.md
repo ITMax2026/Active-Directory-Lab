@@ -1,0 +1,1 @@
+Sections 1-6:  These sections detail how to initally set up and test a network environment.  It describes a Windows Server 2022 install with Active Directory. It sets up Users, Groups and Organizations Units.  It creates two Group Policies.  Finally it connects a Client and tests the Group Policies.
