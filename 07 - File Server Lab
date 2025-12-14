@@ -1,1 +1,30 @@
 
+Goal: Create a drive (S:) on the domain controller that other users can access
+Security Model:
+  - Share Permissions: Authenticated Users = Full Control 
+    - It is too cumbersome to manage security at two levels.  So at the Share level we provide minimal screening and let NTFS handle security inside
+  - NTFS Permission: Hardened security where Principle of Least Privilege applies
+  - Access-Based Enumeration (ABE):  If a user doesn't have folder permission, the folder is hidden
+
+Part 1: Verify Identity/Setup (Optional
+  1. Open ADUC (Active Directory Users and Computers)
+  2. Check John HR:
+    - Democorp > General_Staff (OU)
+    - Open John HR > Member Of tab > Verify G_HR_Staff
+  3. Check Jeff Admin:
+    - Democorp > Admin_Department (OU)
+    - Open Jeff Admin > Member Of tab > Verify G_IT_Admins
+
+Part 2: Create Shared Folders
+  1. Log into DC01
+  2. Open File Explorer and navigate to C:\
+  3. Create a new Folder:  Name it CorpData
+  4. Inside CorpData > Create two subfolders:
+    - HR_Data
+    - IT_Data
+
+Part 3: Open Share, Closed NTFS
+  Step 1: Open Share
+    1. Right click C:\CorpData > Properties > Sharing > Advanced Sharing
+    2. Check Share this folder
+    3. Share Name: CorpData
