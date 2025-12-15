@@ -74,4 +74,24 @@ Part 4: Turn on Access-Based Enumeration (ABE)
   4. Check Enable access-based enumeration
 
 Part 5: Group Policy Drive Mapping
+  * Following the Open Share, Closed NTFS policy, we are linking the Drive Mapping GPO to the DemoCorp OU so it applied to all Users and permissions are handled by NTFS
+  1. Open Group Policy Management on DC01
+  2. Right click DemoCorp OU > Create a GPO in this domain, and Link it here..
+  3. Name: U_DriveMap_CorpData  (* We are using a User policy, as User Group membership (ie G_HR_Staff) will manage permissions
+  4. Right click the new GPO > Edit
+  5. User Configuration > Preferences > Windows Settings > Drive Maps
+  6. Right click white area > New > Mapped Drive
+
+  General Tab:
+    - Action: Updata
+    - Location: \\DC01.ad.lab\CorpData
+    - Reconnect: Checked
+    - Label: DemoCorp Shared Data
+    - Drive Letter: S:
+
+  Common Tab:
+    - Check Run in logged-on user's security context
+    - Item-level Targeting > Targeting button
+    - New Item > Security Group
+    - Group: Domain Users (*Same Open Share, Closed NTFS policy, we map the drive for all domain users, and then relay of NTFS for File/Folder permissions/access)
 
