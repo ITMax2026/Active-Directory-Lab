@@ -95,3 +95,13 @@ Part 5: Group Policy Drive Mapping
     - New Item > Security Group
     - Group: Domain Users (*Same Open Share, Closed NTFS policy, we map the drive for all domain users, and then relay of NTFS for File/Folder permissions/access)
 
+Part 6: Verification
+
+  Test 1: HR User (John HR)
+    1. Log into Client-01 as ad.lab/John HR
+    2. Open File Explorer.  You should see the S: drive - DemoCorp Shared Drive
+    3. Visibility test: 
+      - You should see HR_Data; you should not see IT_Data (Becasue of ABE)
+    4.'Root Lock' test:  Open S: and try to create test.txt in the root
+      - You should see 'Destination Folder Access Denied'
+
