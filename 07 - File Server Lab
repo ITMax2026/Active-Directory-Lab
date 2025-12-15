@@ -28,3 +28,28 @@ Part 3: Open Share, Closed NTFS
     1. Right click C:\CorpData > Properties > Sharing > Advanced Sharing
     2. Check Share this folder
     3. Share Name: CorpData
+    4. Click Permissions Button
+      - Remove Everyone
+      - Add Authenticated Users
+      - Check Full Control 
+        * This lets anyone connected to the network access the Share.  We are going to let NTFS handle file/folder level security
+
+  Step 2: NTFS Root Lock
+    1. Right click C:CorpData > Properties > Security > Advanced
+    2. Disable Inheritence > "Convert inherited permissions itno explicit permissions"
+      * Subfolders keep same permissions they have right now, but will have independent permissions the parent folder going forward
+    3. Permission Clean Up
+      - Keep SYSTEM and Administrators (Full Control)
+      - Remove Users (local)
+    4. Access Permission (for Everyone)
+      - Click Add > Select a principle > Domain Users
+        - Type: Allow
+        - Applies to: This folder only
+        - Basic Permissions: Read & Execute, List folder contents, Read
+      - Click OK
+      - 
+    *Root Lock keeps S:\  clean and limits future permission mistakes
+
+
+  Step 3: Closed NTFS
+    1. 
