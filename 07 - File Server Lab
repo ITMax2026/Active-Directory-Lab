@@ -51,4 +51,27 @@ Part 3: Open Share, Closed NTFS
 
   Step 3: Closed NTFS - Subfolder Lever
     1. Secure HR_Data
-      1. Right
+      1. Right click C:\CorpData\HR_Data > Properties > Security > Advanced 
+      2. Disable inheritence > Convert to explicit
+      3. Edit (Groups or User Names):
+        - Remove Domain Users
+        - Add G_HR_Staff  
+        - Permission: Modify
+
+    2. Secure IT_Data
+      1. Right click C:\CorpData\IT_Data > Properties > Security > Advanced 
+      2. Disable inheritence > Convert to explicit
+      3. Edit (Groups or User Names):
+        - Remove Domain Users
+        - Add G_IT_Admins  
+        - Permission: Modify
+
+Part 4: Turn on Access-Based Enumeration (ABE)
+    * When this is turned off John HR will see the IT_Data folder but get an error when clicking it; when it is on, John won't be able to see the folder
+  1. Open Server Manager
+  2. File and Storage Services > Shares
+  3. Right click CorpData > Properties > Settings
+  4. Check Enable access-based enumeration
+
+Part 5: Group Policy Drive Mapping
+
