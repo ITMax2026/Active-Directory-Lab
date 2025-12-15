@@ -47,9 +47,8 @@ Part 3: Open Share, Closed NTFS
         - Applies to: This folder only
         - Basic Permissions: Read & Execute, List folder contents, Read
       - Click OK
-      - 
     *Root Lock keeps S:\  clean and limits future permission mistakes
 
-
-  Step 3: Closed NTFS
-    1. 
+  Step 3: Closed NTFS - Subfolder Lever
+    1. Secure HR_Data
+      1. Right
