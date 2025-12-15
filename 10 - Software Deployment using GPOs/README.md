@@ -33,10 +33,41 @@ Of note: GPO Software Installation works best with MSI packages and often there 
     - \\DC01\c$
   4. This will open the C: folder on the Server.  Open the Deploy folder you just created
   5. Drag and drop the MSI file from the Clients downloads folder to the Deploy folder
+  6. Rename the file notepad++ (this will help with file referencing later)
 
-3. Organize Active Directory
-  1. Open Active Directory Users and Computers (ADUC)
-  2. 
+3. Configure the GPO (Perform on Client via RSAT)
+   1. Open Group Policy Management
+   2. Right click Workstations OU > Create a GPO in this domain, and Link it here...
+   3. Name it: Deploy Notepad++
+   4. Right click the new GPO > Edit
+  
+4. Configure 'Status' GPOs - Common but Optional
+   A. Force Verbose Status:
+     - Computer configuration > Policies > Administrative Templates > System
+     - Double click Display highly detailed status messages
+     - Click to set to Enabled.  Click OK
+
+   B. Force Network Wait:
+     - Computer Config > Policies > Admin Templates > Sysetm > Logon
+     - Double click Always wait for the network at computer startup and logon
+     - Click to set to Enabled. Click Ok
+  
+5. Add the Software Installation to the GPO
+     - Computer Configuration > Policies > Software Settings > Software installation
+     - Right click the empty space > New > Package
+     - In the file browser bar type the UNC path
+         - \\DC01\Deploy$\notepad++.msi
+     - Click Open
+     - Select Assigned. Click OK
+     - Verify: the Source column has the UNC path
+      
+6. Deployment
+   1. On the Client, open Command Promopt as Administrator
+   2. Run gpupdate /force
+   3. It will ask to restart:  Type Y and Enter
+   4. Moment of Truth:
+      - Watch the screen while it boots
+      - Because of the Force Verbose Status you should see "Installing managed soft
 
 
     
