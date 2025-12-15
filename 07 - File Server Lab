@@ -105,3 +105,8 @@ Part 6: Verification
     4.'Root Lock' test:  Open S: and try to create test.txt in the root
       - You should see 'Destination Folder Access Denied'
 
+  Test 2: Admin User (Jeff Admin)
+    1. Still on the client log out and log in as Jeff Admin
+    2. Open S:
+    3. You should see both HR_Data and IT_Data (Jeff is a Domain Admin and is able to bypass NTFS Restrictions.  Plus we allowed Administrators earlier)
+
