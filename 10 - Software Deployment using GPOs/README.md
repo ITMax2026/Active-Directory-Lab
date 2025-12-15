@@ -67,7 +67,8 @@ Of note: GPO Software Installation works best with MSI packages and often there 
    3. It will ask to restart:  Type Y and Enter
    4. Moment of Truth:
       - Watch the screen while it boots
-      - Because of the Force Verbose Status you should see "Installing managed soft
+      - Because of the Force Verbose Status you should see "Installing managed software Notepad++.."
 
-
-    
+7. Success Check
+   1. Log in > Look for the Notepad++ icon on the desktop or on the Start Menu
+   2. You have successfully remotely deployed software to a computer
