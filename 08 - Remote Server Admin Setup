@@ -1,7 +1,6 @@
 
 Goal: Set up RSAT on Client-01 so that you don't have to RDP into DC01 for managing Active Directory
-Purpose:  In a production environments, logging into a Domain Controller (the DC01 Server) for daily tasks, like resetting passwords, is a huge security risk.  
-Instead, you set up secure Admin workstation that can modify the Domain Controller, as needed
+Purpose:  In a production environments, logging into a Domain Controller (the DC01 Server) for daily tasks, like resetting passwords, is a huge security risk.  Instead, you set up secure Admin workstation that can modify the Domain Controller, as needed
 
 
 
