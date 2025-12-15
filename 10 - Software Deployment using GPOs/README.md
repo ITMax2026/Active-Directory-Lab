@@ -10,5 +10,33 @@ Security Mode:
      * The installation have at boot, before users sign on; so the computer must authenticare itself to the server
 
 Of note: GPO Software Installation works best with MSI packages and often there are limitations with EXE-based installers. (EXE files are often deployed with a startup script or the more modern way using Intune)
+
+1. Create the 'Deploy$' Share on DC (Server)
+  1. Create the folder
+     - On the server (C: drive) create a new folder named Deploy
+  2. Share Permissions: Network Access
+      - Right Deploy > Properties > Sharing > Advanced Sharing
+      - Check Share this folder
+      - Share Name: Change to Deploy$ ($ makes it hidden, as discussed above)
+      - Click Permissions. Remove Everyone.  Add Authenticated Users (Read).  Click ok
+  3. NTFS Permissions: Computer permissions
+      - Click the Security tab
+      - Click Edit > Add
+      - Click Object Types > Check Computers > Click OK
+      - Type Domain Computers > Check Names > Select Domain Computers > OK
+      - Ensure Domain Computers has Read & Execute allowed > Click OK > Close
    
-1. Downland Notepad++ MSI
+2. Downland on Client: Notepad++ MSI
+  1. Go to offical Notepad++ Downloads page > Select latest release > Download the 64-bit installer
+  2. Make sure to click the MSI - Installer
+  3. On the Client: Open File Explorer and type into the top address bar"
+    - \\DC01\c$
+  4. This will open the C: folder on the Server.  Open the Deploy folder you just created
+  5. Drag and drop the MSI file from the Clients downloads folder to the Deploy folder
+
+3. Organize Active Directory
+  1. Open Active Directory Users and Computers (ADUC)
+  2. 
+
+
+    
