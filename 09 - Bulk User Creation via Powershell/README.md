@@ -32,9 +32,24 @@ Part 1: Preparation (Client Machine)
 
 Part 2: The Script 
   - I have included the script in the script folder and there is annotation on the script.
-  - Things that stand out
-    - Use of Distinguished Names (DN) which are required by the New-ADUser cmdlet.
+  - Things that stand out:
+    - Distinguished Names (DN) which are required by the New-ADUser cmdlet.
     - Use of a Switch to sort the csv Department attribute into the required DN format
-    - 
+    - UserPrincipalName (UPN) which is a unique identifier formated like an email.  It is used to sign into AD-joined computers but also Microsoft 365/Entra ID
 
 
+Part 3: Verification
+  1. Dry run
+     - Add -WhatIf to the end of the New-ADUser object.
+     - In VS Code press the play button
+     - You should see text for every user in your CSV file.  If you don't you will need to troubleshot the error messages you encounter
+
+  2. Live Run - Once your dry run comes back clearn
+     - Remove the -WhatIf
+     - Press the play button (you likely won't see more output
+  
+  3. Verification
+     - Open Active Directory Users and Computers
+     - Right click the DemoCorp folder and select Refresh
+     - Click into IT_Department:  You should see Bob and Frank
+     - Click into Accounting_Department: You should see David 
