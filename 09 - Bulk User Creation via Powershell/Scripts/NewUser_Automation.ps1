@@ -45,8 +45,8 @@ foreach ($Person in $Users) {
     # backtick(`) creates a line continuation and is standard in New-ADUser setups
     # the attributes after the dash to start the line are build in Powershell user objects in AD
 
+    # Name expects a string, the double $() wrapping is to help with Powershell string interpolation
     New-ADUser  -Name "$($Person.FirstName) $($Person.LastName)" `
-                    # Name expects a string, the double $() wrapping is to help with Powershell string interpolation
                     -GivenName $Person.FirstName `
                     -Surname $Person.LastName `
                     -SamAccountName $Person.SamAccountName `
@@ -55,8 +55,5 @@ foreach ($Person in $Users) {
                     -Department $Person.Department `
                     -AccountPassword $SecurePass `
                     -Enabled $true `
-                    -WhatIf
-
-
 
 }
