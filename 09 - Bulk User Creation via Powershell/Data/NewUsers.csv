@@ -1,1 +1,7 @@
-
+FirstName,LastName,SamAccountName,Department,Password
+Alice,Admin,aadmin,Admin,P@ssword1
+Bob,Builder,bbuilder,IT,P@ssword1
+Charlie,Sales,csales,Sales,P@ssword1
+David,Accounts,daccounts,Accounting,P@ssword1
+Eve,Every,eevery,General,P@ssword1
+Frank,ActiveDir,factivedir,IT,P@ssword1
