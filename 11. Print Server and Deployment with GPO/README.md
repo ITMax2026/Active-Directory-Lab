@@ -40,19 +40,18 @@ Step 2: Driver Setup and Printer Creation - On the Client
  3. Right click Drivers > Add Driver
  4. Click through until you see Printer Driver Selection and select Have Disk
 
-
-
- 
- 7. Expand DC01 > Right click Printers > Add Printer
- 8. Select Add a new printer using an existing port
- 9. 'Dummy Port' Trick:
-    - Select Create a new port > Local Port
-    - Enter Port Name: NUL (Deletes the print queue - Often used when print queues are stuck)
-  10. Driver: Install a new driver > Manufacturer: Generic > Generic/Text Only
-  11. Naming:
-     - Printer Name: HR-Printer
-     - Share Name: HR-Printer
+ Part 4 - Create the Printer
+ 1. Expand DC01 > Right click Printers > Add Printer
+ 2. Select Add a new printer using an existing port:
+   - Select the IP Port you created earlier - 192.168.242.100
+ 3 Select Use an existing printer driver on the computer
+    - Select HP Universal Printing PCL 6
+  4. Driver: Install a new driver > Manufacturer: Generic > Generic/Text Only
+  5. Naming:
+     - Printer Name: HR-Printer-HP
+     - Share Name: HR-Printer-HP
      - Check: Share this printer
-     - Check: List in the directory
+   6. After installation:
+     - Right click > Properties > Sharing > Click List in the directory
     
  Step 3: 
