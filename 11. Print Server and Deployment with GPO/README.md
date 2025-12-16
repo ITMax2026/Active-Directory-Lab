@@ -1,12 +1,9 @@
 Goal: Centralize print management on the Server (DC01) and automate printer mapping for end-users base on their Department/Security Group
  
-  
-Deployment Strategy: Group Policy Preferences (GPP) with Item-Level Targeting (ITL)
-  - Instead of creating a seperate GPO for every department (which creates 'GPO Bloat') we use a single GPO with Item-Level Targeting.
+Deployment Strategy: Group Policy with Item-Level Targeting
+  - Instead of creating a seperate GPO for every department (which creates 'GPO Bloat') we use a single GPO with Item-Level Targeting based on Security Groups.
   - This allows the GPO to evaluate 'Is this user in HR?' before mapping the printer
-  * Result: Users only see the printes relevant to their job function
-
-
+  * Result: Users only see the printes relevant to their job function (Security Group)
 
 Purpose:
   - In a production environment, manually installing printers on individual workstations is inefficient.
