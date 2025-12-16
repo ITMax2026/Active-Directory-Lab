@@ -15,7 +15,10 @@ Purpose:
 
 Step 1: Install the Print Server Role - On the Server
  1. Open Server Manager > Manage > Add Roles and Features
- 2. Select Print and Documet Services > Print Server > Install
+ 2. Click through the wizard, making sure DC01 is selected
+ 3. At Server Roles > Select Print and Documet Services
+ 4. Click through the wizard > At Role Services make sure Print Server is selected
+ 5. Install
 
 Step 2: Driver Setup and Printer Creation - On the Client
  1. Open Print Management (printmanagement.msc)
