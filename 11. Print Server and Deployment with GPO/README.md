@@ -27,18 +27,29 @@ Step 2: Driver Setup and Printer Creation - On the Client
  1. Expand DC01 > Right click Ports > Add Port...
  2. Select Standard TCP/IT Port > New Port... > Next
  3. Printer Name or IP Address: Pick an address not in use from your subnet
-    - My Server is 
+    - My Server is 192.168.242.10 > So make the printer 192.168.242.100
+ 4. It will try to detect the device.  It will fail.  Just wait a few seconds
+ 5. When it finishes > choose Custom > Next > Finish
+
+ Part 3 - Install a 'Real' Driver
+ 1. Google HP Universal Print Driver (PCL6) > Download the Driver from the HP website.
+ 2. Extract the folder and look for a .inf file.  You will see several .inf files.  You are looking for :
+    - Prefix: hpcu - HP Core Universal
+    - Ending: u - Universal
+    - In my case it's a hpcu345u.inf file
+ 3. Right click Drivers > Add Driver
+ 4. Click through until you see Printer Driver Selection and select Have Disk
 
 
 
  
- 5. Expand DC01 > Right click Printers > Add Printer
- 6. Select Add a new printer using an existing port
- 7. 'Dummy Port' Trick:
+ 7. Expand DC01 > Right click Printers > Add Printer
+ 8. Select Add a new printer using an existing port
+ 9. 'Dummy Port' Trick:
     - Select Create a new port > Local Port
     - Enter Port Name: NUL (Deletes the print queue - Often used when print queues are stuck)
-  8. Driver: Install a new driver > Manufacturer: Generic > Generic/Text Only
-  9. Naming:
+  10. Driver: Install a new driver > Manufacturer: Generic > Generic/Text Only
+  11. Naming:
      - Printer Name: HR-Printer
      - Share Name: HR-Printer
      - Check: Share this printer
