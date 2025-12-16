@@ -26,9 +26,9 @@ Step 2: Driver Setup and Printer Creation - On the Client
  3. In Add Servers > Write DC01 > Click Add to List
  4. Expand DC01 > Right click Printers > Add Printer
  5. Select Add a new printer using an existing port
- 6. 'Dummy Port' Trick: (Also often used to clear stuck print queues)
+ 6. 'Dummy Port' Trick:
     - Select Create a new port > Local Port
-    - Enter Port Name: NUL (Deletes the data so queues won't get stuck)
+    - Enter Port Name: NUL (Deletes the print queue - Often used when print queues are stuck)
   7. Driver: Install a new driver > Manufacturer: Generic > Generic/Text Only
   8. Naming:
      - Printer Name: HR-Printer
