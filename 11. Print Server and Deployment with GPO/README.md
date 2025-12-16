@@ -15,3 +15,24 @@ Purpose:
   - This setup achieves 'Zero-Touch Provisioning':  An HR employee simply logs in, and the correct print drivers and settings are automatically configured
 
 
+Step 1: Install the Print Server Role - On the Server
+ 1. Open Server Manager > Manage > Add Roles and Features
+ 2. Select Print and Documet Services > Print Server > Install
+
+Step 2: Driver Setup and Printer Creation - On the Client
+ 1. Open Print Management (printmanagement.msc)
+ 2. Right Click Print Servers > Add/Remove Servers
+ 3. In Add Servers > Write DC01 > Click Add to List
+ 4. Expand DC01 > Right click Printers > Add Printer
+ 5. Select Add a new printer using an existing port
+ 6. 'Dummy Port' Trick: (Also often used to clear stuck print queues)
+    - Select Create a new port > Local Port
+    - Enter Port Name: NUL (Deletes the data so queues won't get stuck)
+  7. Driver: Manufacturer: Generic > Generic/Text Only
+  8. Naming:
+     - Printer Name: HR-Printer
+     - Share Name: HR-Printer
+     - Check: Share this printer
+     - Check: List in the directory
+    
+ Step 3: 
