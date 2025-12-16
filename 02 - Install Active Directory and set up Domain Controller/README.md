@@ -9,7 +9,7 @@
       *   **Subnet mask:** `255.255.255.0`
       *   **Default gateway:** `192.168.242.2` *(Make sure this matches the gateway found in the ipconfig check earlier)*.
   5.  Click **Use the following DNS server addresses**:
-      *   **Preferred DNS server:** `192.168.242.10` *(Points the server to itself for DNS)*.
+      *   **Preferred DNS server:** `127.0.0.1` *(You can also use the Server IP address for this, but loopback is typically preferred because will still work if the static IP changes)*.
     
   ![Static IP](images/windows-server-2022-static-ip.png)
 
