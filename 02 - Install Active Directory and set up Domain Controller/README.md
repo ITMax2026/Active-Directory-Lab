@@ -11,7 +11,7 @@
   5.  Click **Use the following DNS server addresses**:
       *   **Preferred DNS server:** `192.168.242.10` *(Points the server to itself for DNS)*.
     
-  ![Static IP](02 - Install Active Directory and set up Domain Controller/Images/Windows Server 2022 Static IP.png)
+  ![Static IP](images/windows-server-2022-static-ip.png)
 
   
   ### Name the Server
