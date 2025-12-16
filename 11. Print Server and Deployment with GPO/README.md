@@ -6,9 +6,7 @@ Deployment Strategy: Group Policy Preferences (GPP) with Item-Level Targeting (I
   - This allows the GPO to evaluate 'Is this user in HR?' before mapping the printer
   * Result: Users only see the printes relevant to their job function
 
-Security Model: Point and Print Restriction
-  - Modern Windows security prevents standard users from installing printer drivers (stopping the 'PrintNightmare' exploit)
-  - We configure 'Point and Print Restrictions' via GPO to trust the Print Server.  This allows drivers to be installed without granting users Admin access
+
 
 Purpose:
   - In a production environment, manually installing printers on individual workstations is inefficient.
@@ -28,7 +26,7 @@ Step 2: Driver Setup and Printer Creation - On the Client
  6. 'Dummy Port' Trick: (Also often used to clear stuck print queues)
     - Select Create a new port > Local Port
     - Enter Port Name: NUL (Deletes the data so queues won't get stuck)
-  7. Driver: Manufacturer: Generic > Generic/Text Only
+  7. Driver: Install a new driver > Manufacturer: Generic > Generic/Text Only
   8. Naming:
      - Printer Name: HR-Printer
      - Share Name: HR-Printer
