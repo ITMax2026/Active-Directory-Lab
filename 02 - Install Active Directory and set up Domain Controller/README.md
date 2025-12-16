@@ -48,7 +48,7 @@
 **Login Verification:**
 Your log in name should have changed to your domain account (In my case `AD\Administrator`).
 
-![Domain Login Screen](images/02-domain-login-resize.png)
+![Domain Login Screen](02 - Install Active Directory and set up Domain Controller/Images/02-domain-login-resize.png)
 
 ### Verify DNS
 Open Command Prompt and run the following command:
