@@ -5,6 +5,9 @@ Security Model:
     - It is too cumbersome to manage security at two levels.  So at the Share level we provide minimal screening and let NTFS handle security inside
   - NTFS Permission: Hardened security where Principle of Least Privilege applies
   - Access-Based Enumeration (ABE):  If a user doesn't have folder permission, the folder is hidden
+Root Lock:
+  - The S:\ drive root is secured with domain read access to prevent accidental access or misconfiguration, while NTFS permissions on subfolders enforce least-privilege access.
+
 
 Part 1: Verify Identity/Setup (Optional
   1. Open ADUC (Active Directory Users and Computers)
@@ -72,6 +75,14 @@ Part 3: Open Share, Closed NTFS
         - Add G_IT_Admins  
         - Permission: Modify
 
+    3. Secure Legal_Data
+      1. Right click C:\CorpData\Legal_Data > Properties > Security > Advanced 
+      2. Disable inheritence > Convert to explicit
+      3. Edit (Groups or User Names):
+        - Remove Domain Users
+        - Add G_Legal_Staff
+        - Permission: Modify
+
 Part 4: Turn on Access-Based Enumeration (ABE)
     * When this is turned off John HR will see the IT_Data folder but get an error when clicking it; when it is on, John won't be able to see the folder
   1. Open Server Manager
@@ -97,14 +108,13 @@ Part 5: Group Policy Drive Mapping
 
   Common Tab:
     - Check Run in logged-on user's security context
-    - Item-level Targeting > Targeting button
-    - New Item > Security Group
-    - Group: Domain Users (*Same Open Share, Closed NTFS policy, we map the drive for all domain users, and then rely on NTFS for File/Folder permissions/access)
+    * We did not use any Item-level targeting because permissions are handled by the folders themselves (NTFS), not the GPO.
+
 
 Part 6: Verification
 
   Test 1: HR User (John HR)
-    1. Log into Client-01 as ad.lab/John HR
+    1. Log into Client-01 as ad.lab/John HR (jhr)
     2. Open File Explorer.  You should see the S: drive - DemoCorp Shared Drive
     3. Visibility test: 
       - You should see HR_Data; you should not see IT_Data (Becasue of ABE)
@@ -116,5 +126,17 @@ Part 6: Verification
     2. Open S:
     3. You should see both HR_Data and IT_Data (Jeff is a Domain Admin and is able to bypass NTFS Restrictions.  Plus we allowed Administrators earlier)
 
-  Test 3: IT Staff (Create New OU, User, and Security Group)
-    1. 
+  Test 3: Legal Staff 
+    1. Log in as Jenny Law (jlaw)
+    2. Open S:
+    3. You should see Legal_Data
+
+Part 7: Return after Lab 9 (Bulk User creation is complete) - Create a Public shared folder for all Users
+  1. Go to DC01
+  2. Open C:\CorpData > Create a new folder named: Public - DemoCorp
+  3. Right click the folder > Properties > Security
+  4. Edit > Add
+  5. Type Domain Users > Check Names  > OK
+  6. Default permissions are fine: Read & execute - * User can read files but not modify
+  7. Next time a domain joined User opens their S: drive they'll see Public - DemoCorp
+  * This is helpful for Compnay Wide Annoucnements and General Information 
