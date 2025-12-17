@@ -21,6 +21,8 @@ Step 1: Cloud Setup
   1. Get the Tenant
      - Search for 'Microsoft 365 Business Premium Feel Trial'.  Sign up for a free 30-day trial.  You will need a credit card
 
+
+      
 Step 2: Prepare the Domain Controller
 
 
@@ -63,6 +65,19 @@ Step 4: Configure Networking and Join the Domain (On the new AADC-01 Server)
       - Restart the server
       - Log in with your Domain Admin account
      
-  Step 5: 
+  Step 5: Enable RDP on the Destination (AADC-01)
+    1. Server Manager > click Local Server on the left
+    2. Remote Desktop likely says Disabled > Click Disabled
+    3. Select Allow remote connections on this computer (for now, Uncheck "Allow connections only from computers running Remote Desktop with Network Level Authentication")
+    4. Click OK
+
+  Step 6: Download AzureADConnect.msi
+      * I had a somewhat hard time finding this file
+      1. Download from Microsoft Entra Admin Center > Entra Connect > Manage > Download Connect Sync Agent
+  
+  Step 7: Client RDP File Transfer (On Client-01 VM w/ Jeff Admin user)
+    1. Press Win+r > type mstsc
+    2. Computer: (Enter the IP address of the new Member Server) 192.168.242.11 - Do Not Connect Yet
+    3. Click Shows Options > Local Resources
       
      
