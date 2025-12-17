@@ -8,8 +8,11 @@ Architecture Strategy: Dedicated AADC Server
 Security Setup: Hardened Installation
   - IE Enhanced Security Configuration: We did not disable server security globally.
   - Instead specific, common Microsoft endpoints were whitelisted to allow syncronization and authentication while keeping the server secure
-    * I found a list of 4 suggested URLs to whitelist, but during the actual setup the installer prompted me to whitelist around 7 more URLs, which I did
-   
+    * I found a list of 10 suggested URLs to whitelist, but during the actual setup the installer prompted me to whitelist around 7 more URLs, which I did
+
+Administrative Install: 
+  - Used RDP on the Client-01 VM with an Administrative account to install and configure Azure AD Connect/Entra Connect
+
 Authentication Method: Password Hash Synchronization (PHS) with SSO - recommended Microsoft Entra ID hybrid sign-in method
   - Actual passwords are never send to the cloud; a hash of the password is syncronized.
 
@@ -89,10 +92,10 @@ Step 4: Configure Networking and Join the Domain (On the new AADC-01 Server)
     3. Navigate to Users > jadmin > Downloads 
     4. Drag and drop AzureADConnect.msi onto the AADC-01 desktop
 
-  Step 9: Configure Trust Sites:
+  Step 9: Configure Trust Sites (*This step may be optional because I was still prompted to add several sites to Trusted sites during the install - which worked fine)
     1. Press Win+R > run inetcpl.cpl (Internet Properties)
     2. Security tab > Trusted sites > Sites
-    3.  [Azure portal URLs](https://learn.microsoft.com/en-us/azure/azure-portal/azure-portal-safelist-urls?tabs=public-cloud) 
+    3.  I found this list of sites to Whitelist [Azure portal URLs](https://learn.microsoft.com/en-us/azure/azure-portal/azure-portal-safelist-urls?tabs=public-cloud) 
         login.microsoft.com
         login.microsoftonline.com
         login.live.com
@@ -103,3 +106,21 @@ Step 4: Configure Networking and Join the Domain (On the new AADC-01 Server)
         *.msauth.net
         *.aadcdn.microsoftonline-p.com
         *.microsoftonline-p.com
+
+  Step 10: Install and Configure Entra Connect (performed uding RDP on Client-01
+    1. Run the .msi
+    2. Customize > Install
+    3. User Sign-in: Password Hash Synchronizatoin > Enable Single Sign-On
+    4. Connect to Microsoft Entra ID: 
+      - Login with your tenant account: admin@...(ADLab026).onmicrosoft.com
+    5. Connect Your Directories:
+      - Select your local forest (ad.lab)
+      - Click Add Directory
+      - Select Create new AD account > Enter your Domain Admin credentials (ad.lab\Administrator)
+    6. Microsoft Entra Sign-in Configuration:
+      - Check "Continue without matching all UPN suffixes to verified domains" 
+      
+      
+
+
+    
