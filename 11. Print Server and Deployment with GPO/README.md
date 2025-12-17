@@ -85,5 +85,9 @@ Part 2: Driver Setup and Printer Creation - On the Client
  Part 5: Verification
   Test 1: Sales User - (Positive)
     - Log in as Charlie Sales
-     
+    - System > Bluetooth & Devices > Printers & SCanners >  Sales-Printer-HP should be listed
+
+  Test 2: IT Staff User (Negative
+    - Log in as Bob Builder
+    - System > Bluetooth & Devices > Printers & SCanners >  Sales-Printer-HP should be absent
    
