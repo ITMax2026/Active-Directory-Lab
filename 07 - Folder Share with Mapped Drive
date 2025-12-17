@@ -93,7 +93,7 @@ Part 5: Group Policy Drive Mapping
     - Check Run in logged-on user's security context
     - Item-level Targeting > Targeting button
     - New Item > Security Group
-    - Group: Domain Users (*Same Open Share, Closed NTFS policy, we map the drive for all domain users, and then relay of NTFS for File/Folder permissions/access)
+    - Group: Domain Users (*Same Open Share, Closed NTFS policy, we map the drive for all domain users, and then rely on NTFS for File/Folder permissions/access)
 
 Part 6: Verification
 
