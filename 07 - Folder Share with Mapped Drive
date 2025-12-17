@@ -110,3 +110,5 @@ Part 6: Verification
     2. Open S:
     3. You should see both HR_Data and IT_Data (Jeff is a Domain Admin and is able to bypass NTFS Restrictions.  Plus we allowed Administrators earlier)
 
+  Test 3: IT Staff (Create New User)
+    1. 
