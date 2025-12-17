@@ -11,7 +11,7 @@ Security Setup: Hardened Installation
     * I found a list of 10 suggested URLs to whitelist, but during the actual setup the installer prompted me to whitelist around 7 more URLs, which I did
 
 Administrative Install: 
-  - Used RDP on the Client-01 VM with an Administrative account to install and configure Azure AD Connect/Entra Connect
+  - Used RDP on the Client-01 VM with an Admini account to install and configure Azure AD Connect/Entra Connect
 
 Authentication Method: Password Hash Synchronization (PHS) with SSO - recommended Microsoft Entra ID hybrid sign-in method
   - Actual passwords are never send to the cloud; a hash of the password is syncronized.
@@ -118,8 +118,12 @@ Step 4: Configure Networking and Join the Domain (On the new AADC-01 Server)
       - Click Add Directory
       - Select Create new AD account > Enter your Domain Admin credentials (ad.lab\Administrator)
     6. Microsoft Entra Sign-in Configuration:
-      - Check "Continue without matching all UPN suffixes to verified domains" 
-      
+      - Check "Continue without matching all UPN suffixes to verified domains" (I don't own a public domain that I can verify and this selection is fine for a lab)
+    7. OU Filtering
+      - Select 'Sync selected domains and OUs'
+      - Uncheck ad.lab > Check only DemoCorp
+    8.  Click Next through the rest and Install. (You will be prompted to input your Domain Admin credentials to set up SSO - do this)
+    
       
 
 
