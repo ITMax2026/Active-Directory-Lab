@@ -37,7 +37,7 @@ Part 3: Open Share, Closed NTFS
   Step 2: NTFS Root Lock
     1. Right click C:CorpData > Properties > Security > Advanced
     2. Disable Inheritence > "Convert inherited permissions itno explicit permissions"
-      * Subfolders keep same permissions they have right now, but will have independent permissions the parent folder going forward
+      * Subfolders keep same permissions they have right now, but will have independent permissions than the parent folder going forward
     3. Permission Clean Up
       - Keep SYSTEM and Administrators (Full Control)
       - Remove Users (local)
