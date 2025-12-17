@@ -44,7 +44,7 @@ Step 3: Build the Member Server
      - On the right, select Use ISO image file > Browse and select the Windows Server 2022 ISO file.
      - Click OK.
 
-Step 4: Configure Networking and Join the Domain
+Step 4: Configure Networking and Join the Domain (On the new AADC-01 Server)
   1. Networking:
      - Windows + r > ncpa.cpl
      - Right-click the adapter > Properties > Click Internet Protocol Version 4 (TCP/IP) and select Properties.
@@ -54,6 +54,15 @@ Step 4: Configure Networking and Join the Domain
         Default gateway: 192.168.242.2 (Make sure this matches the gateway found in the ipconfig check earlier).
      - Click Use the following DNS server addresses:
         Preferred DNS server: 192.168.242.10
-   2. Join the Domain
+   2. Join the Domain:
+      - Open Server Manager > Local Server
+      - Click on the Workgroup name
+      - Click Change
+      - Computer Name: AADC-01
+      - Member of: Domain: ad.lab (enter Admin credentials when prompted)
+      - Restart the server
+      - Log in with your Domain Admin account
      
+  Step 5: 
+      
      
