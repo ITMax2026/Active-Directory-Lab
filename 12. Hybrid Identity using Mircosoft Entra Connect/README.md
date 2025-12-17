@@ -8,7 +8,7 @@ Architecture Strategy: Dedicated AADC Server
 Security Setup: Hardened Installation
   - IE Enhanced Security Configuration: We did not disable server security globally.
   - Instead specific, common Microsoft endpoints were whitelisted to allow syncronization and authentication while keeping the server secure
-    * I found a list of 4 suggested URLs to whitelist, but during the actual setup the installer prompted me to whitelist around 10 more URLs, which I did
+    * I found a list of 4 suggested URLs to whitelist, but during the actual setup the installer prompted me to whitelist around 7 more URLs, which I did
    
 Authentication Method: Password Hash Synchronization (PHS) with SSO - recommended Microsoft Entra ID hybrid sign-in method
   - Actual passwords are never send to the cloud; a hash of the password is syncronized.
@@ -88,5 +88,18 @@ Step 4: Configure Networking and Join the Domain (On the new AADC-01 Server)
     2. Click This PC > You will see C on Client-01
     3. Navigate to Users > jadmin > Downloads 
     4. Drag and drop AzureADConnect.msi onto the AADC-01 desktop
-    4. Paste the file onto the AADC-01 desktop
-     
+
+  Step 9: Configure Trust Sites:
+    1. Press Win+R > run inetcpl.cpl (Internet Properties)
+    2. Security tab > Trusted sites > Sites
+    3.  [Azure portal URLs](https://learn.microsoft.com/en-us/azure/azure-portal/azure-portal-safelist-urls?tabs=public-cloud) 
+        login.microsoft.com
+        login.microsoftonline.com
+        login.live.com
+        *.aadcdn.msftauth.net
+        *.aadcdn.msftauthimages.net
+        *.aadcdn.msauthimages.net
+        *.logincdn.msftauth.net
+        *.msauth.net
+        *.aadcdn.microsoftonline-p.com
+        *.microsoftonline-p.com
