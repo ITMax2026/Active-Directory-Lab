@@ -75,9 +75,18 @@ Step 4: Configure Networking and Join the Domain (On the new AADC-01 Server)
       * I had a somewhat hard time finding this file
       1. Download from Microsoft Entra Admin Center > Entra Connect > Manage > Download Connect Sync Agent
   
-  Step 7: Client RDP File Transfer (On Client-01 VM w/ Jeff Admin user)
+  Step 7: Client RDP to AADC-01 (On Client-01 VM w/ Jeff Admin user)
     1. Press Win+r > type mstsc
     2. Computer: (Enter the IP address of the new Member Server) 192.168.242.11 - Do Not Connect Yet
-    3. Click Shows Options > Local Resources
-      
+    3. Click Shows Options > Local Resources > In the 'Local Devices and Resources' section click More..
+    4. Click the check next to Local Disk (C:) > Click OK
+    5. Now Connect (Enter Admin credentials)
+    6. Accept the warning certificate
+    
+  Step 8: RDP File Transfer and Setup
+    1. Inside the RDP window (showing AADC-01) open File Explorer
+    2. Click This PC > You will see C on Client-01
+    3. Navigate to Users > jadmin > Downloads 
+    4. Drag and drop AzureADConnect.msi onto the AADC-01 desktop
+    4. Paste the file onto the AADC-01 desktop
      
