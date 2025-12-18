@@ -1,7 +1,7 @@
 Goal: Establish a Hybrid Identity by synchronizing on-premise Active Directory Users and Groups to Microsoft Entra ID.  
   - This enables a modern Single Sign-On (SSO) experience, where users are able to access cloud resources (Office 365, Teams, OneDrive, etc) with their existing on-prem credentials
 
-Architecture Strategy: Dedicated AADC Server
+Architecture Strategy: Dedicated AADC Server (Tier 0 isolation)
   - Instead of installing Microsoft Entra Connect directly on the Domain Controller, an increase in attack surface, we deployed a dedicated a dedicated Member Server (AADC-01)
   - This adheres to the principle of Least Priviledge by keeping the Domain Controller directly untouched and locked down
 
