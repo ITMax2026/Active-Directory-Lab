@@ -1,4 +1,12 @@
-Fixing Identity Mismatch: Non-Routable (.lab/.local) vs Routable Domains (ie .com)
+The Goal: Enabling seamless synchronization, authentication, and single sign-on across hybrid environments
+
+Hybrid Identity Architecture:
+  - User Principle Name (UPN) is the primary login identifier
+  - Microsoft Entra ID and Entra Connect rely on the UPN to:
+      - Uniquely match on-prem and cloud user objects
+      - Authenticare users
+      - Enable Single Sign-On (SSO)
+    * If UPNs differ betweeen on-prem and Cloud identity correlation doesn't work 
 
 Problem:
   - During initial synchonization, my on-premise Active Directory was configured with a non-routable domain (@ad.lab), while my Microsoft 365 tenant used a public, routable domain (@ADLab026.onmicrosoft.com)
