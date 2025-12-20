@@ -48,11 +48,16 @@ Part 4: Implement Custom Conditional Access policies:
   Policy 1: Adaptive MFA
     - Conditional Access policies > Click Create new policy
     - Name: CA01: Require MFA for all Users (Excluding Trusted Location)
-    - Users: Include All Users; Exclude Emergency 
+    - Users: Include All Users; Exclude Emergency Admin
     - Target Resources: All cloud apps
     - Network: Include: Any network or location; Exclude Selected Networks and locations > Lab-Trusted-Network
     - Grant: Grant Access > click Require Multi-factor authentication
     - Enable Policy: On
+
+   Policy 2: Geoblocking
+     - Name: CA02: Block Access from Restricted Countries
+     - Users: Include All Users; Exclude Emergency Admin
+     - Network: 
 
 
 Part 5:
