@@ -35,7 +35,7 @@ Part 2: Define Trusted Location
          - 2600:382:ba38:3fea:11ca:53a8:1eaa:ffc0 > becomes 2600:382:ba38::/48
      - Click Create
 
-Part 3: Conflict Resolution
+Part 3: Conflict Resolution - There is more about this is section 13.5 
   * We need to not only disable Security Defaults but also Deactive default Microsoft-managed conditional access policies
   1. 
 
