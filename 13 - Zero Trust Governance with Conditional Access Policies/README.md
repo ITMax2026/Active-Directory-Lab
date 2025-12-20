@@ -49,17 +49,23 @@ Part 4: Implement Custom Conditional Access policies:
     - Conditional Access policies > Click Create new policy
     - Name: CA01: Require MFA for all Users (Excluding Trusted Location)
     - Users: Include All Users; Exclude Emergency Admin
-    - Target Resources: All cloud apps
+    - Target Resources: All resources
     - Network: Include: Any network or location; Exclude Selected Networks and locations > Lab-Trusted-Network
     - Grant: Grant Access > click Require Multi-factor authentication
     - Enable Policy: On
 
    Policy 2: Geoblocking
-     - Name: CA02: Block Access from Restricted Countries
-     - Users: Include All Users; Exclude Emergency Admin
-     - Network: 
+     1. Conditional Access policies > Named Locations > click + Countries location 
+         - Name: Blocked-Countries
+         - Select a few countries (I selected Candada to use as the test subject with a VPN later) > Click create
+     2. Conditional Access policies > New Policy
+       - Name: CA02: Block Access from Restricted Countries
+       - Users: Include All Users; Exclude Emergency Admin
+       - Target Resources: All resources
+       - Network: Include: Selected networks and locations > Choose Blocked-Countries
+       - Grant: Block Access
+       - Enable Policy: On
 
-
-Part 5:
+Part 5: Validation
 
 https://login.microsoftonline.com/
