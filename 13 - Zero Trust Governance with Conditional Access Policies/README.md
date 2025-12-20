@@ -37,7 +37,24 @@ Part 2: Define Trusted Location
 
 Part 3: Conflict Resolution - There is more about this is section 13.5 
   * We need to not only disable Security Defaults but also Deactive default Microsoft-managed conditional access policies
-  1. 
+  1. Disable Security Defaults: Go to Entra ID > Overview > Properties > Manage security defaults > set to Disabled
+  2. Deactivate Microsoft Conditional Access policies: Go to Conditional Access (left side) > Policies
+     *Set the following Microsoft managed policies to Off or Report-only
+     - Multifactor authentication for all users
+     - Multifactor authentication for admins
+     - Multifactor authentication for Azure Management
+
+Part 4: Implement Custom Conditional Access policies:
+  Policy 1: Adaptive MFA
+    - Conditional Access policies > Click Create new policy
+    - Name: CA01: Require MFA for all Users (Excluding Trusted Location)
+    - Users: Include All Users; Exclude Emergency 
+    - Target Resources: All cloud apps
+    - Network: Include: Any network or location; Exclude Selected Networks and locations > Lab-Trusted-Network
+    - Grant: Grant Access > click Require Multi-factor authentication
+    - Enable Policy: On
 
 
-Part 4
+Part 5:
+
+https://login.microsoftonline.com/
