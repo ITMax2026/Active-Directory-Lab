@@ -37,7 +37,23 @@ Part 3: Configure the Service Provider (SaaS App)
   * Most SAML apps require you to help provision bu entering Cloud/Microsoft details into their admin portals
   1. Go to https://samltoolkit.azurewebsites.net/
   2. Register User: Click Register and create an account with the email address of a synced Entra ID user (ie daccounts@ADLab026.onmicrosoft.com)
-  3. 
+  3. The Handshake: click SAML Configuration in the top menu > Click Create
+     - Login URL: https://login.microsoftonline.com/e08d54e3-52c6-478b-b13d-18eb69911e64/saml2 (URL from Entra Section 4)
+     - Azure AD Identifier: https://sts.windows.net/e08d54e3-52c6-478b-b13d-18eb69911e64/ (Microsoft Entra Indentifier from Section 4)
+     - Logout URL: https://login.microsoftonline.com/e08d54e3-52c6-478b-b13d-18eb69911e64/saml2 (Section 4)
+     - Certificate RAW: Choose File > Microsoft Entra SAML Toolkit.cer (saved earlier)
+     - Click Create
+
+Part 4: Verification
+  1. The 'Magic' Link:
+     * After you click Create on SAML 2.0 Single sign-on Configuration you get the field below to be populated
+     - SP Initiated Login URL: https://samltoolkit.azurewebsites.net/SAML/Login/20737
+  2. Demo:
+     - Paste the URL into a Private/Incognito browser
+     - You should be taken to website that says: Use a SAML SSO to log in > then displays Your Connection Identifier = 20737
+     - You will be asked to log in to your Entra ID account > Make sure to use your synced Entra ID user (ie daccounts@ADLab026.onmicrosoft.com)
+     - You will be redirected back to the app, logged in automatically - you will not need to log in with the website username and password you created before
+
 
   
 
