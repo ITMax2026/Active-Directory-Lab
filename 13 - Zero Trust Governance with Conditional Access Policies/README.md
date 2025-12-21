@@ -68,4 +68,13 @@ Part 4: Implement Custom Conditional Access policies:
 
 Part 5: Validation
 
-https://login.microsoftonline.com/
+Test Policy 1
+  1. Open Incognito/Private browser
+  2. Go to https://login.microsoftonline.com/ and log in with a synced AD user (ie. csales@ADLab026.onmicrosoft.com
+  3. Result A (from Home/Trusted Site): You log in with just your password, no popups
+  4. Result B (Test): Turn on a VPN (This will automatically move you out of your Trusted Site).  Log in again.  Entra ID will not force you to provide MFA
+
+Test Policy 2:
+  1. Use VPN to set your location to one of the countries you blocked (ie. Canada)
+  2. Attempt to log in
+  3. You should receive a message that says 'You cannot access this right now'
