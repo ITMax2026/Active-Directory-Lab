@@ -41,7 +41,7 @@ Part 3: Automated Enrollment via Group Policy (GPO)
      - Enabled: "Enable automatic MDM enrollment using default Microsoft Entra credentials"
      - Select Credential Type: User Credentials
 
-Part 5: Verification
+Part 4: Verification
   1. Native Diagnostic
      - Run dsregcmd /status
      - Confirm AzureAdJoined: YES (Hybrid link active)
@@ -50,6 +50,5 @@ Part 5: Verification
    2. Device UI:
       - Setting > Accounts > Access work or school
       - Confirm the presence of the 'Info' button 
-   3. Cloud UI:
-      - 1
+
  
