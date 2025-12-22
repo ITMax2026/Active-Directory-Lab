@@ -33,5 +33,18 @@ Part 2: Cloud Install (Company Portal)
   4. Assignments:
      - Required: Lab Devices Group
      - Next > Create
-  6. 
+
+Part 3: Verification
+  1. Log into Client-01
+  2. Force the Sync:
+     - Settings > Accounts > Access work or school
+     - Click Info > Click Sync
+  3. The Test:
+     1. Camera:
+       - Click the Camera app.
+       - It should say 'We Can't Find Your Camera' with a "0xA00F4244" error
+     3. The App:
+        - Check the Start Menu
+        - App files can be large so it may take 5-10 minutes for the app to appear
+  
      
