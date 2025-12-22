@@ -1,4 +1,6 @@
-Goal:
+Goal:  Move a legacy On-Prem Windows 11 Workstation into a Hybrid Joined state (connected to both Active Direcotry and Entra ID) and have it automatically enroll into Microsoft Intune for cloud management
+
+
 
 Part 1: Configure the Service Connection Point (SCP)
   * Before Intune can manage the device, Entra ID needs to see the device
@@ -47,6 +49,7 @@ Part 5: Verification
      - Confirm MdmUrl populated (MDM discovery successful)
    2. Device UI:
       - Setting > Accounts > Access work or school
-      - Confirm the presence of the 'Info' busson 
-   4. Cloud UI:
+      - Confirm the presence of the 'Info' button 
+   3. Cloud UI:
+      - 1
  
