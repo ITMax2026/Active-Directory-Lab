@@ -14,3 +14,24 @@ Technical Strategy:
   1. Device Hardening: Use Intune Settings to create a 'Modern GPO' that restricts disables the camera (security compliance)
   2. Automated Provisioning (App Deployment): Utilizing the Microsoft Store (new), install software (Microsoft Connect) without user intervention or local deployment
 
+Part 1: Modern GPO
+  1. Intune Admin Center > Devices > Configuration > Create > New Policy
+  2. Platform: Windows 10 and later
+  3. Profile Type: Settings Catalog
+  4. Name: Win - Security - Block Camera
+  5. Configuration Settings:
+     - Add Setting > Settings Picker > Seacrch for Camera > Select
+     - Check the box for Allow Camera
+     - Allow Canera - Set the toggle to Not Allowed
+  6. Assignments:
+     - Select Add Groups > Click Lab Devices
+
+Part 2: Cloud Install (Company Portal)
+  1. Intune Admin Center > Apps > Windows > Create
+  2. App Type: Windows Store app (new) > Select
+  3. Search: Company Portal > Select
+  4. Assignments:
+     - Required: Lab Devices Group
+     - Next > Create
+  6. 
+     
