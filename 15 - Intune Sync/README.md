@@ -30,12 +30,14 @@ Part 2: Computer Object Syncronization (Checking work implemented in step 12)
       - On the Domain/OU Filtering screen > Ensure 'Workstations' OU is checked
 
 Part 3: Automated Enrollment via Group Policy (GPO)
+  * This policy creates a link to computers in the Workstations OU and automatically enrolls it in MDM (Microsoft Intune)
   1. Go to the Group Policy Management Console on DC01
   2. Create a new GPO named "Intune Auto Enrollment" linked to the Workstations OU
   3. Policy Path:
       Computer Configuration > Policies > Administrative Templates > Windows Components > MDM
   4. Setting:
-     - Enabled: "Enable automativ MDM enrollment using default Mcirosoft Entra credentials"
+     - Enabled: "Enable automatic MDM enrollment using default Microsoft Entra credentials"
      - Select Credential Type: User Credentials
 
-Part 4: Intune Cloud Configuration
+Part 5: Verification
+ 
