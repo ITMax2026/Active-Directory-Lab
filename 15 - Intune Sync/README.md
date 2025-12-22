@@ -17,7 +17,7 @@ Part 1: Configure the Service Connection Point (SCP)
       -UPN handles the User's Credentials - it allows a User (Jeff Admin) to prove who he is to the cloud - result AzureADPrt: Yes
         *If you don't follow the instructions in section 12.5 you will try to log in with @ad.lab which isn't a real internet domain and you won't get a PRT
 
-Part 2: Computer Object Syncronization (Checking work implemented in step 12)
+Part 2: Computer Object Syncronization (Checking work implemented in Lab 12)
   1. In the cloud > Go to Entra Admin Center > Devices > All Devices
   2. Search for Client-01: It should be there
   3. Search of AADC-01: It should not be there
