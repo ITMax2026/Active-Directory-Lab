@@ -40,4 +40,13 @@ Part 3: Automated Enrollment via Group Policy (GPO)
      - Select Credential Type: User Credentials
 
 Part 5: Verification
+  1. Native Diagnostic
+     - Run dsregcmd /status
+     - Confirm AzureAdJoined: YES (Hybrid link active)
+     - Confirm AzureAdPrt: YES (User Identity Authenticated)
+     - Confirm MdmUrl populated (MDM discovery successful)
+   2. Device UI:
+      - Setting > Accounts > Access work or school
+      - Confirm the presence of the 'Info' busson 
+   4. Cloud UI:
  
