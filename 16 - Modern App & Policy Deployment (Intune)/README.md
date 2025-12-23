@@ -42,7 +42,7 @@ As organizations shift more towards remote and hybrid work, relying on local Dom
     *   **Required**: Click **Add Groups** and select the `Lab Devices` group.
 5. Click **Next** > **Create**.
 
-![Alt text](./images/my-picture.png)
+![App Deploy](./images/app-install.png)
 
 > | ✅ **Success Criteria:** The Company Portal app is successfully added to the Intune library and assigned as a required deployment.
 
