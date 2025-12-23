@@ -26,7 +26,10 @@ As organizations shift more towards remote and hybrid work, relying on local Dom
 6. Under **Assignments**:
     *   Select **Add Groups** > Click `Lab Devices`.
 
-![Alt text](./images/my-picture.png)
+![Camera GPO](./images/Screenshot 2025-12-22 195814.png)
+
+![Modern GPO](./images/camera-gpo.png)
+
 
 > | ✅ **Success Criteria:** The policy is created and assigned to the "Lab Devices" group within the Settings Catalog.
 
