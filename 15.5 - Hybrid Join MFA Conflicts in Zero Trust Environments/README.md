@@ -37,7 +37,7 @@ Microsoft Intune Enrollment is not **visible** in the Entra Conditional Access p
 3. Enter the following JSON body to expose the Intune **Enrollment** ID for Resource selection:
 `{ "appId": "d4ebce55-015a-49b5-a083-c84d1797ae8c" }`
 
-![Graph Explorer](./images/graph-explorer.png)
+![Graph Explorer](./images/graph-explorer2.png)
 
 **Part 2: Configure CA03: Require MFA (Strict + Intune Enrollment Exclusion)**
 
@@ -52,6 +52,8 @@ Microsoft Intune Enrollment is not **visible** in the Entra Conditional Access p
             *   `Microsoft Intune Enrollment` (ID: `d4ebce55-015a-49b5-a083-c84d1797ae8c`)
             *   `Microsoft Device Management` (ID: `ca0a114d-6fbc-46b3-90fa-2ec954794ddb`)
     *   **Access Controls:** Grant Access > **Require Multifactor Authentication**.
+
+![CA Exclusion](./images/ca-exclusion.png)
 
 > **Technical Note:** I discovered that excluding only the Enrollment resource (`d4eb...`) failed with a "Credentials not verified" error. I identified via Sign-in Logs that the background sync process utilizes a secondary ID (Microsoft Device Management - `ca0a...`). Adding this second exclusion resolved the sync failure.
 
