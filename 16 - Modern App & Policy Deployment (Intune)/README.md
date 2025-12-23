@@ -42,7 +42,6 @@ As organizations shift more towards remote and hybrid work, relying on local Dom
     *   **Required**: Click **Add Groups** and select the `Lab Devices` group.
 5. Click **Next** > **Create**.
 
-![App Deploy](./images/app-install2.png)
 
 > | ✅ **Success Criteria:** The Company Portal app is successfully added to the Intune library and assigned as a required deployment.
 
@@ -64,7 +63,7 @@ As organizations shift more towards remote and hybrid work, relying on local Dom
 
 ![Intune Software Deploy](images/intune-software.png)
 
-![Intune Install](./images/intune-install.png)
+![Intune Install](./images/app-install2.png)
 
 
 > | ✅ **Success Criteria (Camera):** The app should display: "We Can't Find Your Camera" with error code `0xA00F4244`.
