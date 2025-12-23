@@ -55,7 +55,7 @@ As organizations shift more towards remote and hybrid work, relying on local Dom
     *   Click **Info** > Click **Sync**.
 3. **Test the Camera**:
     *   Open the **Camera** app.
-    *   
+   
 ![Camera Block](images/camera-block.png)
 
 4. **Test the App Deployment**:
