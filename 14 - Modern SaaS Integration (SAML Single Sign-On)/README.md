@@ -39,7 +39,7 @@
 3.  **SAML Certificates** (Section 3): Download the **Certificate (Raw)** into your downloads folder.
 4.  **SAML Toolkit** (Section 4): Keep this tab open; you will need this info for the next part.
 
-![SAML Login](./images/saml-login.png)
+![SAML Config](./images/saml-config.png)
 
 ---
 
