@@ -21,7 +21,7 @@
 2.  Search for **Microsoft Entra SAML Toolkit**.
 3.  Click **Create**.
 4.  Click into the App > **Assign Users and Groups** > **Add User/Group** > Click **None Selected** under **Users and Groups**.
-5.  Add your User (i.e., `Bob Builder`).
+5.  Add your User (i.e., `David Accounts`).
 
 | ✅ **Success Criteria:** The application should appear in your Enterprise Applications list with the user assigned.
 
@@ -39,6 +39,8 @@
 3.  **SAML Certificates** (Section 3): Download the **Certificate (Raw)** into your downloads folder.
 4.  **SAML Toolkit** (Section 4): Keep this tab open; you will need this info for the next part.
 
+![Alt text](./images/my-picture.png)
+
 ---
 
 ### **3. Configure the Service Provider (SaaS App)**
@@ -53,6 +55,8 @@
     *   **Logout URL:** `https://login.microsoftonline.com/e08d54e3-52c6-478b-b13d-18eb69911e64/saml2`
     *   **Certificate RAW:** Choose File > **Microsoft Entra SAML Toolkit.cer** (saved earlier).
     *   Click **Create**.
+
+![Alt text](./images/my-picture.png)
 
 ---
 
