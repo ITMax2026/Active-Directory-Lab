@@ -24,7 +24,7 @@ Historically, organizations were encouraged to use internal-only domains (like `
 ### **3. Solution: Align Local AD to the Cloud (Manual Process)**
 
 1. On **DC01**: Open **Active Directory Domains and Trusts**.
-2. Right-click **ad.lab** > **Properties**.
+2. Right-click **Active Directory Domains and Trusts [DC01.ab.lab]** > **Properties**.
 3. Add suffix — Type: `ADLab026.onmicrosoft.com`.
 4. **Update Users:** Go to **Active Directory Users and Computers** (There are several ways to automate this, but for these 8 users, I did it manually).
     *   Right-click a user (e.g., `Frank ActiveDir` or `Alice Admin`) > **Properties**.
