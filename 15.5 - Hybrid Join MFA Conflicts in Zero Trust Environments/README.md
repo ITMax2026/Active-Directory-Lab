@@ -30,6 +30,7 @@
 # **3. Implementation: Exposing Resources & Configuring CA03**
 
 https://learn.microsoft.com/en-us/intune/intune-service/enrollment/multi-factor-authentication
+
 This website gives this notice:
 
 ![Intune Enrollment](./images/intune-enrollment.png)
