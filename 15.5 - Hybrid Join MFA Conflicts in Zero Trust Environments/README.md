@@ -37,7 +37,7 @@ Microsoft Intune Enrollment is not **visible** in the Entra Conditional Access p
 3. Enter the following JSON body to expose the Intune **Enrollment** ID for Resource selection:
 `{ "appId": "d4ebce55-015a-49b5-a083-c84d1797ae8c" }`
 
-![Alt text](./images/my-picture.png)
+![Graph Explorer](./images/graph-explorer.png)
 
 **Part 2: Configure CA03: Require MFA (Strict + Intune Enrollment Exclusion)**
 
