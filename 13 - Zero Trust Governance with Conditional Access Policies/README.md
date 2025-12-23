@@ -1,7 +1,3 @@
-Based on the formatting style provided in your image, here is the laboratory guide for implementing the Zero Trust security model.
-
-***
-
 # 1. Part 1: 'Break Glass' Account
 *Before enforcing restrictive policies, you must ensure you can never lock yourself out of the tenant.*
 
@@ -21,15 +17,21 @@ Based on the formatting style provided in your image, here is the laboratory gui
     - Find a recent login attempt from a lab machine (e.g., login for `admin@adlab026.onmicrosoft.com`)
     - Look at the **IP address** column: This is the exact address Entra ID 'sees' when you connect.
     * In my case it was an IPv6 address: `2600:382:ba38:3fea:11ca:53a8:1eaa:ffc0`
+  
+![IP Address](./images/ipaddress.png)
+
 2. **Configure Named Location**:
     - **Entra ID** > **Conditional Access** > **Named locations**
     - Create a new **IP ranges location** named: **Lab-Trusted-Network**
     - Check **Mark as trusted location**
+  
 3. **Add IPs using CIDR notation**:
     - For IPv4: Take the IP from the logs and add `/32`
     - For IPv6: Take the first three groups from the logs and add `::/48`
         - `2600:382:ba38:3fea:11ca:53a8:1eaa:ffc0` > becomes `2600:382:ba38::/48`
     - Click **Create**.
+
+![Trusted Network](./images/trusted-network.png)
 
 # 3. Part 3: Conflict Resolution
 *We need to not only disable Security Defaults but also deactivate default Microsoft-managed conditional access policies. (See section 13.5 for more details).*
@@ -52,6 +54,8 @@ Based on the formatting style provided in your image, here is the laboratory gui
 6. **Grant**: **Grant Access** > click **Require multi-factor authentication**
 7. **Enable Policy**: **On**
 
+![CA1](./images/ca-1.png)
+
 ### **Policy 2: Geoblocking**
 1. **Conditional Access policies** > **Named locations** > click **+ Countries location**
     - **Name**: **Blocked-Countries**
@@ -64,6 +68,8 @@ Based on the formatting style provided in your image, here is the laboratory gui
     - **Grant**: **Block Access**
     - **Enable Policy**: **On**
 
+![CA2](./images/ca2.png)
+
 # 5. Part 5: Validation
 
 1. Open **Incognito/Private browser**.
@@ -75,11 +81,15 @@ Based on the formatting style provided in your image, here is the laboratory gui
 
 3. Turn on a **VPN** (moving you out of your Trusted Site) and log in again.
 
+![MFA](./images/mfa.png)
+
 | | |
 | :--- | :--- |
 | ✅ | **Success Criteria (Policy 1B):** Entra ID will force you to provide Multi-Factor Authentication (MFA). |
 
 4. Use your **VPN** to set your location to one of the countries you blocked (e.g., Canada) and attempt to log in.
+
+![Geoblock](./images/geoblock.png)
 
 | | |
 | :--- | :--- |
