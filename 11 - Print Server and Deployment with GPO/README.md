@@ -1,5 +1,3 @@
-Based on the formatting provided in your screenshot, here is the reformatted version of your Print Management lab.
-
 # **Goal: Centralize print management on the Server (`DC01`) and automate printer mapping for end-users based on their Department/Security Group**
 
 ### **Deployment Strategy: Group Policy with Item-Level Targeting**
