@@ -64,7 +64,7 @@ As organizations shift more towards remote and hybrid work, relying on local Dom
 
 ![Intune Software Deploy](images/intune-software.png)
 
-![Intune Install](./images/my-picture.png)
+![Intune Install](./images/intune-install.png)
 
 
 > | ✅ **Success Criteria (Camera):** The app should display: "We Can't Find Your Camera" with error code `0xA00F4244`.
