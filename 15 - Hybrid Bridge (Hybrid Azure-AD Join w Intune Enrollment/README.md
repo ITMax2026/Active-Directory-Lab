@@ -15,6 +15,8 @@
     - Select `ad.lab`
     - Authentication Service: **Microsoft Entra ID**
 
+![Alt text](./images/my-picture.png)
+
 > *The SCP creates a record in Active Directory of your specific Tenant ID (Azure GUID) and Tenant Domain Name (i.e., `ADLabs026.onmicrosoft.com`).*
 
 **Of Note:**
@@ -57,6 +59,8 @@
 
 ✅ **Success Criteria:** The GPO is linked correctly and the policy setting is set to "Enabled" using User Credentials.
 
+![Alt text](./images/my-picture.png)
+
 ---
 
 ### **4. Verification**
@@ -66,6 +70,9 @@
     - Confirm **AzureAdJoined: YES** (Hybrid link active).
     - Confirm **AzureAdPrt: YES** (User Identity Authenticated).
     - Confirm **MdmUrl** populated (MDM discovery successful).
+
+![Alt text](./images/my-picture.png)
+
 2. **Device UI:**
     - Go to **Settings** > **Accounts** > **Access work or school**.
     - Click on the account and confirm the presence of the **'Info'** button.
