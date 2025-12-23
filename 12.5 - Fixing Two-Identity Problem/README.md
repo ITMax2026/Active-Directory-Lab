@@ -26,13 +26,20 @@ Historically, organizations were encouraged to use internal-only domains (like `
 1. On **DC01**: Open **Active Directory Domains and Trusts**.
 2. Right-click **Active Directory Domains and Trusts [DC01.ab.lab]** > **Properties**.
 3. Add suffix — Type: `ADLab026.onmicrosoft.com`.
-4. **Update Users:** Go to **Active Directory Users and Computers** (There are several ways to automate this, but for these 8 users, I did it manually).
+
+![Domains Trusts](./images/domains-trusts.png)
+
+4. **Update Users:** Go to **Active Directory Users and Computers** (There are several ways to automate this, but for my users, I did it manually).
     *   Right-click a user (e.g., `Frank ActiveDir` or `Alice Admin`) > **Properties**.
     *   Go to the **Account** tab.
     *   Change the dropdown from `@ad.lab` to `@ADLab026.onmicrosoft.com`.
     *   Click **OK**.
+  
+![Accounts](./images/accounts.png)
+
 5. **Force Sync:** On **AADC-01**, open **PowerShell** and run:
     *   `Start-ADSyncSyncCycle -PolicyType Delta`
+
 
 | &nbsp; | ✅ **Success Criteria:** The on-premises UPN suffix should now match the Microsoft Entra ID primary domain. |
 | :--- | :--- |
@@ -46,7 +53,7 @@ Confirm that the login identifiers are now synchronized across both environments
 1. **Locally:** Frank logs in as `factivedir@ADLab026.onmicrosoft.com`.
 2. **Cloud:** Frank logs in as `factivedir@ADLab026.onmicrosoft.com`.
 
-`[Final Sync Verification Screenshot]`
+![Cloud Sync](./images/cloud-sync.png)
 
 | &nbsp; | ✅ **Success Criteria:** Seamless authentication is achieved using a single, consistent UPN for both local and cloud resources. |
 | :--- | :--- |
