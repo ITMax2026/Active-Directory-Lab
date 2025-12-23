@@ -1,80 +1,86 @@
-Goal: Implement a Zero Trust security model by enforcing Multi-Factor Authentication (MFA) and Geoblocking through Microsoft Entra ID Conditional Access Policies
+Based on the formatting style provided in your image, here is the laboratory guide for implementing the Zero Trust security model.
 
-Deployment Strategy:
-  - 'Break Glass' Safety New: Before enforcing restrictions, we establish an emergency, cloud-only administrator account excluded from all policies to prevent accidental tenant lockout
-  - Geolocation Authentication:  We define Trusted Locations (the office IP), which reduces MFA fatigue
-  - Country Block: If a login originates from a high-risk country, the login is blocked
+***
 
-Purpose: 
-  - Identity security: In modern cloud environments, we must verify the identity of the user and the context of the login
+# 1. Part 1: 'Break Glass' Account
+*Before enforcing restrictive policies, you must ensure you can never lock yourself out of the tenant.*
 
-Part 1: 'Break Glass' Account
-  *Before enforcing restrictive policies, you must ensure you can never lock yourself out of the tenant.
-  1. Log into Microsoft Entra admin center - https://entra.microsoft.com/
-  2. Go to Entra ID > Users > reate New user
-     - User Principle Name: breakglass@ADLab026.onmicrosoft.com
-     - Display Name: Emergency Admin
-     - Password: Make it complex and make sure to save it somewhere safe
-     - Assignments:
-       - Global Administator
-      
-Part 2: Define Trusted Location
-  * We want to tell Entra ID our Office IP Ranges to reduce MFA fatigue.
-  1. Extract IP from Logs:
-     - Navigate to Entra ID > Monitoring & Health > Sign-In Logs
-     - Find a recent login attempt from a lab machine (eg login for admin@adlab026.onmicrosoft.com)
-     - Look at the IP address column: This is the exact adddress Entra ID 'sees' when you connect
-      * In my case it was an IPv6 address: 2600:382:ba38:3fea:11ca:53a8:1eaa:ffc0
-  2. Configure Named Location
-     - Entra ID > Conditional Access > Named Locations
-     - Create a new IP ranges location named: Lab-Trusted-Network
-     - Check Mark as trusted location
-  3. Add IPs using CIDR notation
-     - For IPv4: Take the IP from the logs and add /32
-     - For IPv6: Take the first three groups from the logs and add ::/48
-         - 2600:382:ba38:3fea:11ca:53a8:1eaa:ffc0 > becomes 2600:382:ba38::/48
-     - Click Create
+1. Log into **Microsoft Entra admin center** - [https://entra.microsoft.com/](https://entra.microsoft.com/)
+2. Go to **Entra ID** > **Users** > **Create new user**
+    - **User Principal Name**: `breakglass@ADLab026.onmicrosoft.com`
+    - **Display Name**: Emergency Admin
+    - **Password**: Make it complex and make sure to save it somewhere safe
+    - **Assignments**:
+        - **Global Administrator**
 
-Part 3: Conflict Resolution - There is more about this is section 13.5 
-  * We need to not only disable Security Defaults but also Deactive default Microsoft-managed conditional access policies
-  1. Disable Security Defaults: Go to Entra ID > Overview > Properties > Manage security defaults > set to Disabled
-  2. Deactivate Microsoft Conditional Access policies: Go to Conditional Access (left side) > Policies
-     *Set the following Microsoft managed policies to Off or Report-only
-     - Multifactor authentication for all users
-     - Multifactor authentication for admins
-     - Multifactor authentication for Azure Management
+# 2. Part 2: Define Trusted Location
+*We want to tell Entra ID our Office IP Ranges to reduce MFA fatigue.*
 
-Part 4: Implement Custom Conditional Access policies:
-  Policy 1: Adaptive MFA
-    - Conditional Access policies > Click Create new policy
-    - Name: CA01: Require MFA for all Users (Excluding Trusted Location)
-    - Users: Include All Users; Exclude Emergency Admin
-    - Target Resources: All resources
-    - Network: Include: Any network or location; Exclude Selected Networks and locations > Lab-Trusted-Network
-    - Grant: Grant Access > click Require Multi-factor authentication
-    - Enable Policy: On
+1. **Extract IP from Logs**:
+    - Navigate to **Entra ID** > **Monitoring & Health** > **Sign-in logs**
+    - Find a recent login attempt from a lab machine (e.g., login for `admin@adlab026.onmicrosoft.com`)
+    - Look at the **IP address** column: This is the exact address Entra ID 'sees' when you connect.
+    * In my case it was an IPv6 address: `2600:382:ba38:3fea:11ca:53a8:1eaa:ffc0`
+2. **Configure Named Location**:
+    - **Entra ID** > **Conditional Access** > **Named locations**
+    - Create a new **IP ranges location** named: **Lab-Trusted-Network**
+    - Check **Mark as trusted location**
+3. **Add IPs using CIDR notation**:
+    - For IPv4: Take the IP from the logs and add `/32`
+    - For IPv6: Take the first three groups from the logs and add `::/48`
+        - `2600:382:ba38:3fea:11ca:53a8:1eaa:ffc0` > becomes `2600:382:ba38::/48`
+    - Click **Create**.
 
-   Policy 2: Geoblocking
-     1. Conditional Access policies > Named Locations > click + Countries location 
-         - Name: Blocked-Countries
-         - Select a few countries (I selected Candada to use as the test subject with a VPN later) > Click create
-     2. Conditional Access policies > New Policy
-       - Name: CA02: Block Access from Restricted Countries
-       - Users: Include All Users; Exclude Emergency Admin
-       - Target Resources: All resources
-       - Network: Include: Selected networks and locations > Choose Blocked-Countries
-       - Grant: Block Access
-       - Enable Policy: On
+# 3. Part 3: Conflict Resolution
+*We need to not only disable Security Defaults but also deactivate default Microsoft-managed conditional access policies. (See section 13.5 for more details).*
 
-Part 5: Validation
+1. **Disable Security Defaults**: Go to **Entra ID** > **Overview** > **Properties** > **Manage security defaults** > set to **Disabled**.
+2. **Deactivate Microsoft Conditional Access policies**: Go to **Conditional Access** > **Policies**.
+    - Set the following Microsoft-managed policies to **Off** or **Report-only**:
+        - **Multifactor authentication for all users**
+        - **Multifactor authentication for admins**
+        - **Multifactor authentication for Azure Management**
 
-Test Policy 1
-  1. Open Incognito/Private browser
-  2. Go to https://login.microsoftonline.com/ and log in with a synced AD user (ie. csales@ADLab026.onmicrosoft.com
-  3. Result A (from Home/Trusted Site): You log in with just your password, no popups
-  4. Result B (Test): Turn on a VPN (This will automatically move you out of your Trusted Site).  Log in again.  Entra ID will not force you to provide MFA
+# 4. Part 4: Implement Custom Conditional Access Policies
 
-Test Policy 2:
-  1. Use VPN to set your location to one of the countries you blocked (ie. Canada)
-  2. Attempt to log in
-  3. You should receive a message that says 'You cannot access this right now'
+### **Policy 1: Adaptive MFA**
+1. **Conditional Access policies** > Click **Create new policy**.
+2. **Name**: **CA01: Require MFA for all Users (Excluding Trusted Location)**
+3. **Users**: Include **All Users**; Exclude **Emergency Admin**
+4. **Target Resources**: **All cloud apps**
+5. **Network**: Include: **Any network or location**; Exclude **Selected networks and locations** > **Lab-Trusted-Network**
+6. **Grant**: **Grant Access** > click **Require multi-factor authentication**
+7. **Enable Policy**: **On**
+
+### **Policy 2: Geoblocking**
+1. **Conditional Access policies** > **Named locations** > click **+ Countries location**
+    - **Name**: **Blocked-Countries**
+    - Select a few countries (e.g., Canada) > Click **Create**.
+2. **Conditional Access policies** > **New Policy**
+    - **Name**: **CA02: Block Access from Restricted Countries**
+    - **Users**: Include **All Users**; Exclude **Emergency Admin**
+    - **Target Resources**: **All cloud apps**
+    - **Network**: Include: **Selected networks and locations** > Choose **Blocked-Countries**
+    - **Grant**: **Block Access**
+    - **Enable Policy**: **On**
+
+# 5. Part 5: Validation
+
+1. Open **Incognito/Private browser**.
+2. Go to [https://login.microsoftonline.com/](https://login.microsoftonline.com/) and log in with a synced AD user (e.g., `csales@ADLab026.onmicrosoft.com`).
+
+| | |
+| :--- | :--- |
+| ✅ | **Success Criteria (Policy 1A):** Logging in from a **Home/Trusted Site** allows you to log in with just your password and no popups. |
+
+3. Turn on a **VPN** (moving you out of your Trusted Site) and log in again.
+
+| | |
+| :--- | :--- |
+| ✅ | **Success Criteria (Policy 1B):** Entra ID will force you to provide Multi-Factor Authentication (MFA). |
+
+4. Use your **VPN** to set your location to one of the countries you blocked (e.g., Canada) and attempt to log in.
+
+| | |
+| :--- | :--- |
+| ✅ | **Success Criteria (Policy 2):** You should receive a message stating "You cannot access this right now" due to Geoblocking. |
