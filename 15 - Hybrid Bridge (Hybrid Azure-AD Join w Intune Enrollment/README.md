@@ -20,7 +20,7 @@
 **Of Note:**
 * **SCP** handles the Computer's Map — it tells the physical hardware (`Client-01`) they are Hybrid Joined — result **AzureADJoined: Yes**.
 * **UPN** handles the User's Credentials — it allows a User (**Jeff Admin**) to prove who he is to the cloud — result **AzureADPrt: Yes**.
-* *If you don't follow the instructions in section 12.5, you will try to log in with `@ad.lab` which isn't a real internet domain and you won't get a PRT.*
+* *If you don't follow the instructions in section 12.5, you will try to log in with `@ad.lab` which isn't a real internet domain and you won't get a PRT - This will block Intune enrollment.*
 
 ✅ **Success Criteria:** The SCP configuration completes successfully, allowing the workstation to discover the Entra ID tenant.
 
