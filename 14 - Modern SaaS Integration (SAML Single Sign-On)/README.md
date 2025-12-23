@@ -39,7 +39,7 @@
 3.  **SAML Certificates** (Section 3): Download the **Certificate (Raw)** into your downloads folder.
 4.  **SAML Toolkit** (Section 4): Keep this tab open; you will need this info for the next part.
 
-![Alt text](./images/my-picture.png)
+![SAML Login](./images/saml-login.png)
 
 ---
 
@@ -56,7 +56,7 @@
     *   **Certificate RAW:** Choose File > **Microsoft Entra SAML Toolkit.cer** (saved earlier).
     *   Click **Create**.
 
-![Alt text](./images/my-picture.png)
+![SaaS Handshare](./images/saas-handshake.png)
 
 ---
 
@@ -64,9 +64,15 @@
 
 1.  **The "Magic" Link:** After clicking **Create** on SAML 2.0 Single sign-on Configuration, the field below will be populated:
     *   **SP Initiated Login URL:** `https://samltoolkit.azurewebsites.net/SAML/Login/20737`
+
+![SAML Login](./images/saml-login.png)
+
 2.  **Demo:**
     *   Paste the URL into a **Private/Incognito** browser.
     *   You should be taken to a website that says: "Use a SAML SSO to log in" > then displays **Your Connection Identifier** = `20737`.
     *   You will be asked to log in to your Entra ID account. Use your synced Entra ID user (i.e., `daccounts@ADLab026.onmicrosoft.com`).
+
+![SAML SSO](./images/saml-sso.png)
+
 
 | ✅ **Success Criteria:** You are redirected back to the app and logged in automatically without entering the website-specific username and password created in Part 3.
