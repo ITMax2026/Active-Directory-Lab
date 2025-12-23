@@ -28,8 +28,6 @@ As organizations shift more towards remote and hybrid work, relying on local Dom
 
 ![Camera GPO](./images/camera-50.png)
 
-![Modern GPO](./images/camera-gpo.png)
-
 
 > | ✅ **Success Criteria:** The policy is created and assigned to the "Lab Devices" group within the Settings Catalog.
 
