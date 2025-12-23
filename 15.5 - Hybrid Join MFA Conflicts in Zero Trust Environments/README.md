@@ -88,4 +88,4 @@ Microsoft Intune Enrollment is not **visible** in the Entra Conditional Access p
 | ✅ **Success Criteria:** Device visibility: `Client-01` should appear in the Intune Admin Center as a Managed device. |
 | :--- |
 
-![Client-01](./images/my-picture.png)
+![Client-01](./images/client-01.png)
