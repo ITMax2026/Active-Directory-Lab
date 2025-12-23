@@ -26,7 +26,7 @@ As organizations shift more towards remote and hybrid work, relying on local Dom
 6. Under **Assignments**:
     *   Select **Add Groups** > Click `Lab Devices`.
 
-[Modern GPO Configuration Screenshot]
+![Alt text](./images/my-picture.png)
 
 > | ✅ **Success Criteria:** The policy is created and assigned to the "Lab Devices" group within the Settings Catalog.
 
@@ -41,7 +41,7 @@ As organizations shift more towards remote and hybrid work, relying on local Dom
     *   **Required**: Click **Add Groups** and select the `Lab Devices` group.
 5. Click **Next** > **Create**.
 
-[Cloud Install Configuration Screenshot]
+![Alt text](./images/my-picture.png)
 
 > | ✅ **Success Criteria:** The Company Portal app is successfully added to the Intune library and assigned as a required deployment.
 
@@ -62,6 +62,8 @@ As organizations shift more towards remote and hybrid work, relying on local Dom
     *   Check the **Start Menu** for the **Company Portal** app. (Note: App files can be large, so it may take 5-10 minutes to appear).
 
 ![Intune Software Deploy](images/intune-software.png)
+
+![Intune Install](./images/my-picture.png)
 
 
 > | ✅ **Success Criteria (Camera):** The app should display: "We Can't Find Your Camera" with error code `0xA00F4244`.
