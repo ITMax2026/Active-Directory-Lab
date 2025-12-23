@@ -26,7 +26,7 @@ As organizations shift more towards remote and hybrid work, relying on local Dom
 6. Under **Assignments**:
     *   Select **Add Groups** > Click `Lab Devices`.
 
-![Camera GPO](./images/Screenshot 2025-12-22 195814.png)
+![Camera GPO](./images/camera-50.png)
 
 ![Modern GPO](./images/camera-gpo.png)
 
