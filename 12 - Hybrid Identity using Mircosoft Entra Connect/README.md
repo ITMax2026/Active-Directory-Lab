@@ -120,10 +120,15 @@
     - Select forest: `ad.lab`.
     - Click **Add Directory** > **Create new AD account** > Enter `ad.lab\Administrator` credentials.
 6.  **Entra Sign-in Configuration:** Check **"Continue without matching all UPN suffixes to verified domains."**
+
+![Entra Connect](./images/entra-connect.png)
+
 7.  **OU Filtering:**
     - Select **Sync selected domains and OUs.**
     - Uncheck `ad.lab` and check **only** the `DemoCorp` OU.
 8.  Click **Next** and **Install.** Enter Domain Admin credentials for SSO setup when prompted.
+
+![Users](./images/users.png)
 
 | ✅ **Success Criteria:** The installer should complete successfully, and users from the `DemoCorp` OU should begin appearing in the Microsoft Entra Admin Center. |
 | :--- |
