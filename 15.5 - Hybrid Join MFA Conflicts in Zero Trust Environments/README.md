@@ -29,6 +29,11 @@
 
 # **3. Implementation: Exposing Resources & Configuring CA03**
 
+https://learn.microsoft.com/en-us/intune/intune-service/enrollment/multi-factor-authentication
+This website gives this notice:
+
+![Intune Enrollment](./images/intune-enrollment.png)
+
 **Part 1: Exposing "Hidden" Resources**
 Microsoft Intune Enrollment is not **visible** in the Entra Conditional Access picker. You must utilize Microsoft Graph to instantiate the Service **Principal** manually.
 
