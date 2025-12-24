@@ -75,11 +75,16 @@
 3.  Select **Allow remote connections to this computer.**
 4.  (Optional) Uncheck "Allow connections only from computers running Remote Desktop with Network Level Authentication" for laboratory purposes.
 5.  Click **OK.**
+  
+![Enable RDP](./images/enable-rdp.png)
+
 
 ## **6. Download AzureADConnect.msi**
 
 1.  Navigate to the **Microsoft Entra Admin Center.**
 2.  Go to **Entra Connect** > **Connect Sync** > **Download Connect Sync Agent.**
+
+![Download Azure](./images/download-azure.png)
 
 ## **7. Client RDP to AADC-01**
 *Perform on `Client-01` VM using the `jadmin` user.*
@@ -90,6 +95,10 @@
 4.  Under **Local devices and resources**, click **More...**
 5.  Check the box for **Drive C:** > Click **OK.**
 6.  Click **Connect** and enter your Admin credentials.
+
+![RDP1](./images/rdp1.png)
+
+![RDP2](./images/rdp2.png)
 
 ## **8. RDP File Transfer and Setup**
 
