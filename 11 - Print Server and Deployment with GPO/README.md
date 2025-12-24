@@ -61,7 +61,7 @@
 
 ---
 
-## **4. Create the GPO with Item-Level Targeting**
+## **3. Create the GPO with Item-Level Targeting**
 
 ### **Step 1: Create the GPO**
 1.  Open **Group Policy Management**.
@@ -92,7 +92,7 @@
 
 ---
 
-## **5. Verification**
+## **4. Verification**
 
 ### **Test 1: Sales User (Positive)**
 1.  Log in as `Charlie Sales`.
