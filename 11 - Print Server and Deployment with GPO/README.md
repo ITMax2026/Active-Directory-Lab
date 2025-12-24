@@ -61,7 +61,7 @@
   
 ![Print Share](./images/sharing.png)
 
-![Printer Ready](./images/console.png)
+![Printer Ready](./images/printer-ready.png)
 
 ---
 
