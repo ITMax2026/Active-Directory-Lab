@@ -87,12 +87,19 @@
 4.  **General Tab:**
     *   **Action:** Update
     *   **Share path:** `\\DC01\Sales-Printer-HP`
+
+![General Tab](./images/general-tab.png)
+
 5.  **Common Tab:**
     *   Check **Run on logged-in user's security context**.
     *   Check **Item-level targeting** > Click **Targeting**.
     *   Click **New Item** > **Security Group**.
     *   Click **...** > Search for `G_Sales_Staff` > Click **OK**.
     *   It should read: *"the user is a member of the security group AD\G_Sales_Staff"*.
+
+![Printer Targeting](./images/targeting.png)
+
+![Printer GPO](./images/group-policy-printer.png)
 
 ---
 
