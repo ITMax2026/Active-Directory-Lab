@@ -85,7 +85,7 @@
 4. In the file browser bar, type the UNC path:
     *   `\\DC01\Deploy$\notepad++.msi`
 
-![App Install](./images/shared-app.png)
+![App Install](./images/select-app.png)
 
 5. Click **Open**.
 6. Select **Assigned**. Click **OK**.
