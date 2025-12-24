@@ -72,20 +72,19 @@
 1. Open **Group Policy Management**.
 2. Right-click **Workstations OU** > **Create a GPO in this domain, and Link it here...**
 3. Name it: `Deploy Notepad++`.
-4. Right-click the new GPO > **Edit**.
-
 
 ---
 
 ### 5. Add the Software Installation to the GPO
 
-1. **Computer Configuration** > **Policies** > **Software Settings** > **Software installation**.
-2. Right-click the empty space > **New** > **Package**.
-3. In the file browser bar, type the UNC path:
+1. Right-click the new GPO > **Edit**.
+2. **Computer Configuration** > **Policies** > **Software Settings** > **Software installation**.
+3. Right-click the empty space > **New** > **Package**.
+4. In the file browser bar, type the UNC path:
     *   `\\DC01\Deploy$\notepad++.msi`
-4. Click **Open**.
-5. Select **Assigned**. Click **OK**.
-6. **Verify:** The **Source** column displays the UNC path.
+5. Click **Open**.
+6. Select **Assigned**. Click **OK**.
+7. **Verify:** The **Source** column displays the UNC path.
 
 `[GPO Software Installation Screenshot]`
 
