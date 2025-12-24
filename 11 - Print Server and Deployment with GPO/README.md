@@ -58,6 +58,9 @@
     *   Check **Share this printer**.
 6.  After installation:
     *   Right-click the printer > **Properties** > **Sharing** > Click **List in the directory**.
+  
+![Alt text](./images/my-picture.png)
+
 
 ---
 
