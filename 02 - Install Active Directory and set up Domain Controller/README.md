@@ -48,7 +48,7 @@
 **Login Verification:**
 Your log in name should have changed to your domain account (In my case `AD\Administrator`).
 
-![Domain Login Screen](.images/domain-login-resize.png)
+![Domain Login Screen](images/domain-login-resize.png)
 
 ### Verify DNS
 Open Command Prompt and run the following command:
@@ -56,7 +56,7 @@ Open Command Prompt and run the following command:
 nslookup ad.lab
 ```
 
-![NSLookup Success](.images/nslookup-verify.png)
+![NSLookup Success](images/nslookup-verify.png)
 
 > **✅ Success Criteria:**
 > It should return the IP address of your server (`192.168.242.10`).
