@@ -22,14 +22,20 @@
     *   Right-click **Deploy** > **Properties** > **Sharing** > **Advanced Sharing**.
     *   Check **Share this folder**.
     *   **Share Name:** Change to `Deploy$` (the $ makes it hidden).
+
+![Alt text](./images/my-picture.png)
+
     *   Click **Permissions**. Remove **Everyone**. Add `Authenticated Users` (Read). Click **OK**.
-3. NTFS Permissions (Computer permissions):
+  
+![Alt text](./images/my-picture.png)
+
+3. NTFS Permissions (Domain Computer permissions):
     *   Click the **Security** tab.
     *   Click **Edit** > **Add**.
     *   Type `Domain Computers` > **Check Names** > Select **Domain Computers** > **OK**.
     *   Ensure **Domain Computers** has **Read & Execute** allowed > Click **OK** > **Close**.
 
-`[Deploy Share Permissions Screenshot]`
+![Alt text](./images/my-picture.png)
 
 | ✅ **Success Criteria:** The folder is shared as `Deploy$` and `Domain Computers` have Read & Execute NTFS permissions.
 
@@ -47,16 +53,7 @@
 
 ---
 
-### 3. Configure the GPO (Perform on Client via RSAT)
-
-1. Open **Group Policy Management**.
-2. Right-click **Workstations OU** > **Create a GPO in this domain, and Link it here...**
-3. Name it: `Deploy Notepad++`.
-4. Right-click the new GPO > **Edit**.
-
----
-
-### 4. Configure 'Status' GPOs (Optional)
+### 3. Configure 'Status' GPOs (Optional)
 
 **A. Force Verbose Status:**
 1. **Computer Configuration** > **Policies** > **Administrative Templates** > **System**.
@@ -64,9 +61,19 @@
 3. Click to set to **Enabled**. Click **OK**.
 
 **B. Force Network Wait:**
-1. **Computer Config** > **Policies** > **Admin Templates** > **System** > **Logon**.
+1. **Computer Configuration** > **Policies** > **Admin Templates** > **System** > **Logon**.
 2. Double-click **Always wait for the network at computer startup and logon**.
 3. Click to set to **Enabled**. Click **OK**.
+
+---
+
+### 4. Configure the GPO (Perform on Client via RSAT)
+
+1. Open **Group Policy Management**.
+2. Right-click **Workstations OU** > **Create a GPO in this domain, and Link it here...**
+3. Name it: `Deploy Notepad++`.
+4. Right-click the new GPO > **Edit**.
+
 
 ---
 
