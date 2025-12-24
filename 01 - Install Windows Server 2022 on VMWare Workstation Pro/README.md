@@ -41,5 +41,5 @@
 > **✅ Success Criteria:**
 > You should now see the **Server Manager > Dashboard**. We will set up Active Directory in the next section.
 >
-> ![Server Manager Screenshot](images/01-windows-server-manger.png)
+> ![Server Manager Screenshot](images/windows-server-manger.png)
 > 
