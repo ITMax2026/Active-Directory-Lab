@@ -26,7 +26,6 @@
 3. NTFS Permissions (Computer permissions):
     *   Click the **Security** tab.
     *   Click **Edit** > **Add**.
-    *   Click **Object Types** > Check **Computers** > Click **OK**.
     *   Type `Domain Computers` > **Check Names** > Select **Domain Computers** > **OK**.
     *   Ensure **Domain Computers** has **Read & Execute** allowed > Click **OK** > **Close**.
 
