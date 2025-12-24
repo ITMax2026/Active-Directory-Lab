@@ -11,7 +11,7 @@
     *   `Workstations` *(for Computers)*
     *   `Groups`
   
-![AD Structure Tree](images/03-ad-ou-structure.png)
+![AD Structure Tree](./images/ad-ou-structure.png)
 
 ## Part 2: Create the Groups
 1.  Right-click the **Groups** OU > **New** > **Group**.
@@ -23,7 +23,7 @@
     *   **Scope:** Global
     *   **Type:** Security
 
-![Security Groups List](images/03-ad-security-groups.png)
+![Security Groups List](./images/ad-security-groups.png)
 
 ## Part 3: Create the Users
 *I will use two contrasting users; one with admin power (Admin) and one who is restricted (Staff).*
@@ -50,5 +50,5 @@
     *   Type `G_HR_Staff` > **OK**. *(For organizational tracking)*.
     *   Repeat the steps above and add: `Domain Admins` > **OK**. *(For real admin privileges)*.
 
-![Jeff Admin Group Membership](images/03-jeff-admin-group-member_of.png)
+![Jeff Admin Group Membership](./images/jeff-admin-group-member_of.png)
 
