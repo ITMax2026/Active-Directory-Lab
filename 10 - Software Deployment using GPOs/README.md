@@ -22,12 +22,12 @@
     *   Right-click **Deploy** > **Properties** > **Sharing** > **Advanced Sharing**.
     *   Check **Share this folder**.
     *   **Share Name:** Change to `Deploy$` (the $ makes it hidden).
-
-![Alt text](./images/my-picture.png)
+  
+![Share Name](./images/share-name.png)
 
     *   Click **Permissions**. Remove **Everyone**. Add `Authenticated Users` (Read). Click **OK**.
   
-![Alt text](./images/my-picture.png)
+![Share Permissions](./images/share-permissions.png)
 
 3. NTFS Permissions (Domain Computer permissions):
     *   Click the **Security** tab.
@@ -35,7 +35,7 @@
     *   Type `Domain Computers` > **Check Names** > Select **Domain Computers** > **OK**.
     *   Ensure **Domain Computers** has **Read & Execute** allowed > Click **OK** > **Close**.
 
-![Alt text](./images/my-picture.png)
+![NTFS Permissions](./images/ntfs-permission.png)
 
 | ✅ **Success Criteria:** The folder is shared as `Deploy$` and `Domain Computers` have Read & Execute NTFS permissions.
 
@@ -50,6 +50,8 @@
 4. This will open the C: folder on the Server. Open the `Deploy` folder you just created.
 5. Drag and drop the MSI file from the Client's downloads folder to the `Deploy` folder.
 6. Rename the file `notepad++` (this will help with file referencing later).
+
+![MSI Transfer](./images/transfer.png)
 
 ---
 
@@ -82,11 +84,17 @@
 3. Right-click the empty space > **New** > **Package**.
 4. In the file browser bar, type the UNC path:
     *   `\\DC01\Deploy$\notepad++.msi`
+
+![App Install](./images/shared-app.png)
+
 5. Click **Open**.
 6. Select **Assigned**. Click **OK**.
+
+![Assigned](./images/assigned.png)
+
 7. **Verify:** The **Source** column displays the UNC path.
 
-`[GPO Software Installation Screenshot]`
+![GPO Notepad++](./images/gpo-notepad.png)
 
 ---
 
@@ -99,6 +107,8 @@
     *   Watch the screen while it boots.
     *   Because of the **Force Verbose Status**, you should see "Installing managed software Notepad++..."
 
+![Notepad++ Install](./images/notepad-install.jpg)
+
 ---
 
 ### 7. Success Check
@@ -106,6 +116,6 @@
 1. Log in > Look for the **Notepad++** icon on the desktop or in the **Start Menu**.
 2. You have successfully remotely deployed software to a computer.
 
-`[Notepad++ Installed Screenshot]`
+![Startmenu](./images/startmenu.png)
 
 | ✅ **Success Criteria:** Notepad++ appears in the Start Menu and opens normally without user-initiated installation.
