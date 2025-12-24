@@ -33,11 +33,15 @@
     *   **Preferred:** `192.168.242.10`
 5.  Click **Close**.
 
+![Alt text](./images/my-picture.png)
+
 ### Test the DNS
 From Terminal/Command Prompt, run:
 ```cmd
 ping ad.lab
 ```
+
+![Alt text](./images/my-picture.png)
 
 > **✅ Success Criteria:**
 > If you get a reply, DNS is working.
@@ -49,12 +53,17 @@ ping ad.lab
 4.  Fill in **Username:** `Administrator` and **Password**.
 5.  **Restart computer**.
 
+![Alt text](./images/my-picture.png)
+
 ## 6. Move Client-01 into Workstations OU
 *Note: When the Windows 11 VM joins the domain, Active Directory puts the Client-01 object into the default computers container. However, the login GPO is linked to the Workstations OU. The default computers container is outside the OU so the policy doesn't apply to the VM.*
 
 1.  Open **Active Directory Users and Computers**.
 2.  Open the **Computers** container > Drag `Client-01` into the **Workstations** OU, which is inside the `DemoCorp_Root` OU.
-3.  On the client open Command Prompt > type:
+
+![Alt text](./images/my-picture.png)
+
+2.  On the client open Command Prompt > type:
     ```cmd
     gpupdate /force
     ```
