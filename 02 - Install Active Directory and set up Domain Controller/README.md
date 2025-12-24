@@ -56,7 +56,7 @@ Open Command Prompt and run the following command:
 nslookup ad.lab
 ```
 
-![NSLookup Success](images/nslookup-verify.png)
+![NSLookup Success](./images/nslookup-verify.png)
 
 > **✅ Success Criteria:**
 > It should return the IP address of your server (`192.168.242.10`).
@@ -67,7 +67,7 @@ nslookup ad.lab
 2.  Ensure your domain `ad.lab` is visible.
 3.  Browse the **Domain Controllers** OU.
 
-![ADUC Domain Controller OU](images/02-aduc-dc-verify.png)
+![ADUC Domain Controller OU](images/aduc-dc-verify.png)
 
 > **✅ Success Criteria:**
 > You should see `DC01` listed inside the Domain Controllers OU.
