@@ -59,8 +59,9 @@
 6.  After installation:
     *   Right-click the printer > **Properties** > **Sharing** > Click **List in the directory**.
   
-![Alt text](./images/my-picture.png)
+![Print Share](./images/sharing.png)
 
+![Printer Ready](./images/console.png)
 
 ---
 
