@@ -31,13 +31,15 @@ The script mostly exists to reshape the CSV data, especially **Department**, int
     *   Right-click the **IT_Department** OU > **Properties** > **Attribute Editor** tab > find `distinguishedName`.
     *   Copy at least one for later (e.g., `OU=IT_Department,OU=DemoCorp,DC=ad,DC=lab`).
 
+![DN](./images/dn.png)
+
 3.  **Create a CSV File**
     *   Open **Notepad**.
     *   Create headers: `FirstName, LastName, SamAccountName, Department, Password`.
     *   Add 5-10 dummy users (Make sure every department has a user and you can use job titles to help with names).
     *   Save the file as `C:\Temp\NewUsers.csv` on the client machine.
 
-    ![CSV File Screenshot placeholder]
+![Users CSV](./images/users-csv.png)
 
 ***
 
@@ -58,6 +60,8 @@ The script mostly exists to reshape the CSV data, especially **Department**, int
     *   In **VS Code** press the **play button**.
     *   You should see text for every user in your CSV file. If you don't, you will need to troubleshoot the error messages you encounter.
 
+![WhatIf](./images/whatif.png)
+
 2.  **Live Run**
     *   Once your dry run comes back clean, remove the `-WhatIf`.
     *   Press the **play button** (you likely won't see more output).
@@ -68,6 +72,6 @@ The script mostly exists to reshape the CSV data, especially **Department**, int
     *   Click into `IT_Department`.
     *   Click into `Accounting_Department`.
 
-    ![AD Verification Screenshot placeholder]
+![Users Populated](./images/user-populate.png)
 
     | ✅ **Success Criteria:** You should see **Bob** and **Frank** in the `IT_Department` and **David** in the `Accounting_Department`.
