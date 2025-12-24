@@ -3,7 +3,7 @@
 1. Restart the **Windows 11 client VM**.
 2. Before you type a password, you should see the pop-up: *"Security Warning: This system is for authorized use only.  Users must obey the Acceptable Use Policy"*.
 
-[!AUP Security Warning Screenshot](images/aup-security-warning.png)
+[!AUP Security Warning Screenshot](./images/aup-security-warning.png)
 
 3. Click **OK**.
 
@@ -15,7 +15,7 @@
 1. Log in as: `jhr` (The Restricted User).
 2. Once logged in, right-click the **Start Button** and try to open **Settings** or search for **Control Panel**.
 
-[![Control Panel Lockout Screenshot](images/06-control-panel-lockout.png)](images/06-control-panel-lockout.png)
+[!Control Panel Lockout Screenshot](./images/control-panel-lockout.png)
 
 > **✅ Success Criteria:**
 > It should show a message: "This operation has been cancelled due to restrictions in effect on this computer."
