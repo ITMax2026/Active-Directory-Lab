@@ -13,8 +13,12 @@
 4. Look for **RSAT: Active Directory Domain Services and Lightweight Directory Services Tools**.
 5. Click the box next to it > **Next** > **Install**.
 
+![RSAT Install](./images/rsat-install.png)
+
 | ✅ **Success Criteria:** RSAT tools should be listed under "Installed features" once the progress bar completes. |
 | :--- |
+
+
 
 ## **3. Testing a Task (Resetting a Password)**
 
@@ -25,5 +29,8 @@
 5. Right-click **John HR** > **Reset Password**.
 6. Enter new password: `P@ssword123`.
 
+![RSAT Password Test](./images/rsat-test.png)
+
 | ✅ **Success Criteria:** You should receive a confirmation message stating "The password for John HR has been changed." |
 | :--- |
+
