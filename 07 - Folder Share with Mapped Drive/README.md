@@ -50,7 +50,7 @@
     *   Check **Full Control**
     *   *Note: This lets anyone connected to the network access the Share. We are going to let NTFS handle file/folder level security.*
 
-![Alt text](./images/my-picture.png)
+![Open Share](./images/open-share.png)
 
 **Step 2: NTFS Root Lock**
 1.  Right-click **C:\CorpData** > **Properties** > **Security** > **Advanced**.
@@ -67,7 +67,7 @@
     *   Click **OK**
     *   *Note: Root Lock keeps S:\ clean and limits future permission mistakes.*
 
-![Alt text](./images/my-picture.png)
+![Corpdata Permissions](./images/corpdata-permissions.png)
 
 **Step 3: Closed NTFS - Subfolder Level**
 1.  **Secure HR_Data**
@@ -78,7 +78,7 @@
         *   Add **G_HR_Staff**
         *   Permission: **Modify**
 
-![Alt text](./images/my-picture.png)
+![HR Permissions](./images/hr-permissions.png)
 
 2.  **Secure IT_Data**
     1.  Right-click **C:\CorpData\IT_Data** > **Properties** > **Security** > **Advanced**.
@@ -105,7 +105,7 @@
 3.  Right-click **CorpData** > **Properties** > **Settings**.
 4.  Check **Enable access-based enumeration**.
 
-![Alt text](./images/my-picture.png)
+![ABE](./images/abe.png)
 
 ### 5. Group Policy Drive Mapping
 
@@ -118,7 +118,7 @@
 5.  **User Configuration** > **Preferences** > **Windows Settings** > **Drive Maps**.
 6.  Right-click white area > **New** > **Mapped Drive**.
 
-![Alt text](./images/my-picture.png)
+![Drive Map](./images/drive-maps.png)
 
 **General Tab:**
 *   Action: **Update**
@@ -127,13 +127,13 @@
 *   Label: **DemoCorp Shared Data**
 *   Drive Letter: **S:**
 
-![Alt text](./images/my-picture.png)
+![GPO Drive General](./images/gpo--drive-general.png)
 
 **Common Tab:**
 *   Check **Run in logged-on user's security context**
 *   *Note: We did not use any Item-level targeting because permissions are handled by the folders themselves (NTFS), not the GPO.*
 
-![Alt text](./images/my-picture.png)
+![GPO Drive Common](./images/gpo-drive-common.png)
 
 ### 6. Verification
 
