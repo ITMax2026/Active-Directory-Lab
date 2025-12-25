@@ -50,6 +50,8 @@
     *   Check **Full Control**
     *   *Note: This lets anyone connected to the network access the Share. We are going to let NTFS handle file/folder level security.*
 
+![Alt text](./images/my-picture.png)
+
 **Step 2: NTFS Root Lock**
 1.  Right-click **C:\CorpData** > **Properties** > **Security** > **Advanced**.
 2.  **Disable Inheritance** > "**Convert inherited permissions into explicit permissions**".
@@ -65,6 +67,8 @@
     *   Click **OK**
     *   *Note: Root Lock keeps S:\ clean and limits future permission mistakes.*
 
+![Alt text](./images/my-picture.png)
+
 **Step 3: Closed NTFS - Subfolder Level**
 1.  **Secure HR_Data**
     1.  Right-click **C:\CorpData\HR_Data** > **Properties** > **Security** > **Advanced**.
@@ -73,6 +77,8 @@
         *   Remove **Domain Users**
         *   Add **G_HR_Staff**
         *   Permission: **Modify**
+
+![Alt text](./images/my-picture.png)
 
 2.  **Secure IT_Data**
     1.  Right-click **C:\CorpData\IT_Data** > **Properties** > **Security** > **Advanced**.
@@ -99,6 +105,8 @@
 3.  Right-click **CorpData** > **Properties** > **Settings**.
 4.  Check **Enable access-based enumeration**.
 
+![Alt text](./images/my-picture.png)
+
 ### 5. Group Policy Drive Mapping
 
 *Following the Open Share, Closed NTFS policy, we are linking the Drive Mapping GPO to the DemoCorp OU so it applies to all Users and permissions are handled by NTFS.*
@@ -110,6 +118,8 @@
 5.  **User Configuration** > **Preferences** > **Windows Settings** > **Drive Maps**.
 6.  Right-click white area > **New** > **Mapped Drive**.
 
+![Alt text](./images/my-picture.png)
+
 **General Tab:**
 *   Action: **Update**
 *   Location: **\\DC01.ad.lab\CorpData**
@@ -117,9 +127,13 @@
 *   Label: **DemoCorp Shared Data**
 *   Drive Letter: **S:**
 
+![Alt text](./images/my-picture.png)
+
 **Common Tab:**
 *   Check **Run in logged-on user's security context**
 *   *Note: We did not use any Item-level targeting because permissions are handled by the folders themselves (NTFS), not the GPO.*
+
+![Alt text](./images/my-picture.png)
 
 ### 6. Verification
 
@@ -130,6 +144,11 @@
     *   You should see **HR_Data**; you should not see **IT_Data** (Because of ABE).
 4.  'Root Lock' test: Open **S:** and try to create **test.txt** in the root.
 
+![HR Access](./images/hr-access.png)
+
+![Access Denied](./images/access-denied.png)
+
+
     ✅ **Success Criteria:** You should see 'Destination Folder Access Denied'.
 
 **Test 2: Admin User (Jeff Admin)**
@@ -137,11 +156,15 @@
 2.  Open **S:**.
 3.  You should see both **HR_Data** and **IT_Data**.
 
+![Admin Access](./images/admin-access.png)
+
     ✅ **Success Criteria:** Jeff is a Domain Admin and is able to bypass NTFS Restrictions (plus we allowed Administrators earlier).
 
 **Test 3: Legal Staff**
 1.  Log in as **Jenny Law (jlaw)**.
 2.  Open **S:**.
+
+![Legal Access](./images/legal-access.png)
 
     ✅ **Success Criteria:** You should see **Legal_Data**.
 
