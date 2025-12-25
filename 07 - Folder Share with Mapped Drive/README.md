@@ -127,7 +127,7 @@
 *   Label: **DemoCorp Shared Data**
 *   Drive Letter: **S:**
 
-![GPO Drive General](./images/gpo--drive-general.png)
+![GPO Drive General](./images/gpo-drive-general.png)
 
 **Common Tab:**
 *   Check **Run in logged-on user's security context**
@@ -142,9 +142,10 @@
 2.  Open File Explorer. You should see the **S:** drive - **DemoCorp Shared Drive**.
 3.  Visibility test:
     *   You should see **HR_Data**; you should not see **IT_Data** (Because of ABE).
-4.  'Root Lock' test: Open **S:** and try to create **test.txt** in the root.
 
 ![HR Access](./images/hr-access.png)
+
+4.  'Root Lock' test: Open **S:** and try to create **test.txt** in the root.
 
 ![Access Denied](./images/access-denied.png)
 
