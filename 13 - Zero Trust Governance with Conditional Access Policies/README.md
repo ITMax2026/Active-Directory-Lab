@@ -68,7 +68,7 @@
     - **Grant**: **Block Access**
     - **Enable Policy**: **On**
 
-![CA2](./images/ca2.png)
+![CA2](./images/ca2-on.png)
 
 # 5. Part 5: Validation
 
