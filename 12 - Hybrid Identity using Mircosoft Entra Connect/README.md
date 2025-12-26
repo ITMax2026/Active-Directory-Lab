@@ -19,7 +19,7 @@
 *   The recommended Microsoft Entra ID hybrid sign-in method. Actual passwords are never sent to the cloud; a hash of the password is synchronized.
 
 ### **Clean Sync**
-*   Only the user/group populated `DemoCorp` Organizational Unit (OU) is synced, keeping the cloud environment clean and secure.
+*   Only the `DemoCorp` Organizational Unit (OU) is synced, keeping the cloud environment clean and secure.
 
 ---
 
