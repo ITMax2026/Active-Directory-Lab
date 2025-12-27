@@ -75,8 +75,6 @@ Microsoft Intune Enrollment is not **visible** in the Entra Conditional Access p
 | ✅ **Success Criteria:** The sync should work successfully, syncing settings and apps with Microsoft Intune without an MFA prompt. |
 | :--- |
 
-![Info Button](./images/info-button.png)
-
 ![Device Sync](./images/device-sync.png)
 
 
