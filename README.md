@@ -1,5 +1,6 @@
 Hybrid Active Directory & Cloud Management Lab
 
+![Active Directory Lab Architecture](lab-diagram.png)
 
 
 Phase 1 - Foundations (Sections 1-6):  
