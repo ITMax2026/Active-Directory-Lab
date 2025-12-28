@@ -45,7 +45,7 @@ The goal of this section is to make users aware of the conflicts that will arise
 2.  **Mirror Protection:**
     *   Build custom Conditional Access policies (`CA01`, `CA02`) that replicate MFA protections but provide granular controls.
 
-![CA1](./images/ca1.png)
+![CA1](./images/ca1-new.png)
 
 ***
 
