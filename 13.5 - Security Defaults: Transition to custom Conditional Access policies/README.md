@@ -40,7 +40,7 @@ The goal of this section is to make users aware of the conflicts that will arise
 
     *   Explicitly disable all three **Microsoft-managed MFA policies**.
 
-![Microsoft Managed](./images/microsoft-managed.png)
+![Microsoft Managed](./images/ca-defaults.png)
       
 2.  **Mirror Protection:**
     *   Build custom Conditional Access policies (`CA01`, `CA02`) that replicate MFA protections but provide granular controls.
