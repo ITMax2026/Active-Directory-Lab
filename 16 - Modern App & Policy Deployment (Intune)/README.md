@@ -58,13 +58,11 @@ As organizations shift more towards remote and hybrid work, relying on local Dom
    
 ![Camera Block](images/camera-block.png)
 
+> | ✅ **Success Criteria (Camera):** The app should display: "We Can't Find Your Camera" with error code `0xA00F4244`.
+
 4. **Test the App Deployment**:
     *   Check the **Start Menu** for the **Company Portal** app.
 
 ![Intune Software Deploy](images/intune-software.png)
-
-> | ✅ **Success Criteria (Camera):** The app should display: "We Can't Find Your Camera" with error code `0xA00F4244`.
-
-![Intune Install](./images/app-install2.png)
 
 > | ✅ **Success Criteria (App):** The Company Portal application appears in the Start Menu without manual user intervention.
