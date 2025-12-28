@@ -22,28 +22,35 @@ Phase 3 - Hybrid & Cloud Identity (Section 12-13.5):
   
 Phase 4 - Secure Cloud Integration and Modern Endpoint Management (Section 14-16):
   - SSO: Configured modern SaaS application access using SAML Single Single-On (SSO)
-  - 
+  - Hybrid Entra ID Join: Set up Hybrid Entra ID join (formerly HAADJ) to register domain-joined devices with Entra ID, enabling Intune management
+  - MDM: Used Microsoft Intune to demonstrate modern device management with a policy application and a remote app installation
 
 
 
-Add an Architecture Diagram: Use a tool like Lucidchart or Draw.io to create a one-page map of your lab.[1][2] Show the VMware network, the DC, the Client VM, and the connection to the Entra ID cloud.[1] Put this in your main README.md.[1][2]
+Troubleshooting & Lessons Learned:
+On-Prem troubleshooting:  
+1.  Isssue: The main issue I encountered was I didn't click to add the msi file to the GPO before i did the software deployment.  I went back to add the msi file to the GPO, which worked, but the software wouldn't deploy on startup.  
+    Solution: I created a new GPO and correctly loaded the msi file into the GPO and it worked. I deleted the old one
 
-"Challenges & Solutions" Section: In your main README, add a small section called 
-
-"Troubleshooting & Lessons Learned."[1][2] Briefly mention one specific error you hit (e.g., a DNS issue or a sync error) and how you fixed it. Employers love hearing about how you solve problems.
---main issue with on prem was i forgot/didn't to load the msi file before i did the software deployment .  for some reason it wouldn't work if i tried to put it in after
-    - just created a new GPO and it worked and I deleted the old one
-
-  cloud problems
-  my fault--documented the problems i had with the cloud.  wasn't aware of the two-identity problem so didn't have the local domain matching the entra id upn
-  UPN Mismatches: Mention that if a user has a .local UPN on-prem but a .com in the cloud, soft-matching will fail, making your hard-match script the only solution.
-  middle--security defaults.  extremely prohibative and have to disable them all to get exceptions
-  bad setup--that Intune Enrollment app isn't natively supported even thought it seems to be required to maintain MFA and use Intune enrollment - get experience with Microsoft Graph Powershell
+Cloud troubleshooting:
+1.   Issue:  Client-01 was not appearing in Microsoft Entra ID, which was preventing the device from enrolling in Intune via Group Policy.
+        The issue was two-fold: an incomplete Hybrid Join process and a UPN mismatch (the "two-identity problem").
+        Device Syncing: For a device to sync from Active Directory to the cloud, the computer object must have its userCertificate attribute populated. The device generates this certificate after reading the Service Connection Point (SCP), which it gets from running the Hybrid Microsoft Entra ID join . 
+        The UPN Problem: Even if the device object synchronizes, the Hybrid Join cannot complete and Intune enrollment will fail if the local user’s UPN (@ad.lab) does not match the Entra ID UPN (@ADLab025.onmicrosoft.com). Without this match, Windows cannot issue a Primary Refresh Token (PRT), which is the "handshake" required for the device to successfully register and auto-enroll into Intune.
+      Solution:
+        Device Syncing:  Run the SCP service as part of the Hybrid Microsoft Entra ID join process
+        UPN Problem:  Update the UPN on the local AD to match the Entra ID UPN(@ADLab026.onmicrosoft.com)
+  
+2.  Issue: Default security MFA policies were blocking my Conditional Access policies.  
+    Solution:  Disable all of the default MFA Conditional Access policies and make your own, similar but more nuanced, policies
+    
+3.  Issue: Intune Enrollment app isn't natively supported even thought it is required to maintain MFA and use Intune enrollment
+    Solution:  Use Microsoft Graoh Powershell or Explorer to instantiate the Service Principle manually
 
 ===future ideas..direct to cloud powershell...need Microsoft Graph Powershell ...user creation
   - set up sharepoint for cloud shard drive - drive access management
   - - print- tough
     - 
-
+- get experience with Microsoft Graph Powershell
 
 *Resources used to complete this lab include:  YouTube videos, Microsoft articles, Google searches, and Gemini Q&A.  Gemini was used to convert my initial typed writeups into Markdown for presentation and readability.
