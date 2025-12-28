@@ -59,7 +59,7 @@ As organizations shift more towards remote and hybrid work, relying on local Dom
 ![Camera Block](images/camera-block.png)
 
 4. **Test the App Deployment**:
-    *   Check the **Start Menu** for the **Company Portal** app. (Note: App files can be large, so it may take 5-10 minutes to appear).
+    *   Check the **Start Menu** for the **Company Portal** app.
 
 ![Intune Software Deploy](images/intune-software.png)
 
