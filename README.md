@@ -20,7 +20,7 @@ Phase 3 - Hybrid & Cloud Identity (Section 12-13.5):
   - Two-Identity Problem: Resolved non-matching UPNs by aligning local identities with Entra ID identities so hybrid syncronization and authentication will work
   - Zero-Trust Cloud: Build custom Conditional Access Policies, aligned with Zero-Trust principles, for geolocation based Multi-Factor Authentication (MFA)
   
-Phase 4 - Secure Cloud Integration and Modern Endpoint Management (Section 14-16):
+Phase 4 - Cloud Native Management (Section 14-16):
   - SSO: Configured modern SaaS application access using SAML Single Single-On (SSO)
   - Hybrid Entra ID Join: Set up Hybrid Entra ID join (formerly HAADJ) to register domain-joined devices with Entra ID, enabling Intune management
   - MDM: Used Microsoft Intune to demonstrate modern device management with a policy application and a remote app installation
