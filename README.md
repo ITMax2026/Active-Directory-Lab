@@ -62,11 +62,11 @@ Tested the transition from Hybrid-Join to **Full Entra Join**:
 *   **Resource Migration:** Successfully migrated local file shares to **SharePoint Online**, providing cloud-synced access without the need for a local VPN or DC connection.
 
 ### 3. Future Graph API Integration
-Explore the use of **Microsoft Graph PowerShell** for direct cloud provisioning.  Because Graph runs over HTTPS (vs. LDAP for AD), it is required for automated identity management in Entra ID cloud-only.
+Explore the use of **Microsoft Graph PowerShell** for direct cloud provisioning.  Because Graph runs over HTTPS (vs. LDAP for AD), it is required for automated identity management in Entra ID cloud-only environments.
 
 ---
 
 ##  Resources
 *   Microsoft Documentation (Learn), YouTube Videos, Google searches, and Gemini Q&A
-*   *Note: Gemini AI was utilized for Markdown formatting and documentation structure.*
+*   *Note: Gemini AI was utilized for Markdown formatting.*
 
