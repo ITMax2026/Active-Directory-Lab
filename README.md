@@ -1,17 +1,11 @@
-This is a solid, technical write-up. To make it "resume-ready" and more professional for GitHub, I have refined the language to be more action-oriented, corrected typos (like "Microsoft Graoh"), and improved the formatting for better readability.
-
-Here is the edited version of your **README.md**:
-
----
-
 # Hybrid Active Directory & Cloud Management Lab
 
 This project demonstrates the end-to-end implementation of a modern enterprise IT environment, transitioning from a traditional on-premises Active Directory setup to a Hybrid Cloud model using Microsoft Entra ID and Intune.
 
 ![Active Directory Lab Architecture](./images/lab4.png)
 
-## 🚀 Project Overview
-The lab is divided into four phases, covering virtualization, identity management, automation, and cloud-native security principles.
+## Project Overview
+The lab is divided into four phases:
 
 ### Phase 1: Foundations
 *   **Virtualization:** Deployed Windows Server 2022 and Windows 11 Client via VMware Workstation Pro.
@@ -21,8 +15,8 @@ The lab is divided into four phases, covering virtualization, identity managemen
 ### Phase 2: On-Premises Administration
 *   **Infrastructure Provisioning:** Implemented automated Folder Redirection (mapped drives) and a Print Server managed via GPO.
 *   **Security:** Configured Remote Server Administration Tools (RSAT) for secure, delegated server management.
-*   **Automation (PowerShell):** Developed and executed a PowerShell script for bulk user creation within Active Directory.
-*   **Software Deployment:** Orchestrated automated software installation across client machines using GPOs.
+*   **Automation (PowerShell):** Developed and executed a PowerShell script for bulk user creation for Active Directory.
+*   **Software Deployment:** Orchestrated automated software installation for a client machine via GPO.
 
 ### Phase 3: Hybrid & Cloud Identity
 *   **Secure Hybrid Setup:** Configured a domain-joined member server and managed IE Enhanced Security settings for secure administrative access.
@@ -33,7 +27,7 @@ The lab is divided into four phases, covering virtualization, identity managemen
 ### Phase 4: Cloud-Native Management
 *   **SSO:** Configured modern SaaS application access using SAML Single Sign-On (SSO).
 *   **Hybrid Entra ID Join:** Registered domain-joined devices with Entra ID (formerly HAADJ) to enable modern management.
-*   **Mobile Device Management (MDM):** Enrolled devices into **Microsoft Intune** to deploy configuration policies and remote applications.
+*   **Mobile Device Management (MDM):** Enrolled devices into **Microsoft Intune** to deploy configuration policies and remotely install applications.
 
 ---
 
