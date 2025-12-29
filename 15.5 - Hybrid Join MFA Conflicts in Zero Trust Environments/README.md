@@ -31,7 +31,7 @@
 
 https://learn.microsoft.com/en-us/intune/intune-service/enrollment/multi-factor-authentication
 
-This website gives this notice:
+Microsoft gives this notice:
 
 ![Intune Enrollment](./images/intune-enrollment.png)
 
