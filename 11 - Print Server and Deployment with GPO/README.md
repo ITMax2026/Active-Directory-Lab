@@ -108,15 +108,13 @@
 ### **Test 1: Sales User (Positive)**
 1.  Log in as `Charlie Sales`.
 2.  Navigate to **System** > **Bluetooth & Devices** > **Printers & Scanners**.
-| ✅ | **Success Criteria:** `Sales-Printer-HP` should be listed. |
-| :--- | :--- |
+| ✅ | **Success Criteria:** `Sales-Printer-HP` should be listed.
 
 ![Printer Positive](./images/printer-positive.png)
 
 ### **Test 2: IT Staff User (Negative)**
 1.  Log in as `Bob Builder`.
 2.  Navigate to **System** > **Bluetooth & Devices** > **Printers & Scanners**.
-| ✅ | **Success Criteria:** `Sales-Printer-HP` should be absent. |
-| :--- | :--- |
+| ✅ | **Success Criteria:** `Sales-Printer-HP` should be absent.
 
 ![Printer Negative](./images/printer-negative.png)
