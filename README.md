@@ -68,6 +68,6 @@ Explore the use of **Microsoft Graph PowerShell** for direct cloud provisioning.
 ---
 
 ##  Resources
-*   Microsoft Documentation (Learn), YouTube Videos, Google searches, and Gemini Q&A
+*   Microsoft Documentation (Learn), YouTube tutorials and technical walkthroughs, General Google research, and Gemini Q&A
 *   *Note: Gemini AI was utilized for Markdown formatting.*
 
