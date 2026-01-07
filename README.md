@@ -13,10 +13,11 @@ The lab is divided into four phases:
 *   **Group Policy Objects (GPOs):** Hardened the environment by configuring baseline policies, including an Acceptable Use Policy (AUP) banner and Control Panel restrictions.
 
 ### Phase 2: On-Premises Administration
-*   **Infrastructure Provisioning:** Implemented automated Folder Redirection (mapped drives) and a Print Server managed via GPO.
-*   **Security:** Configured Remote Server Administration Tools (RSAT) for secure, delegated server management.
+*   **Infrastructure Provisioning:** Implemented automated Folder Share (mapped drives) and a Print Server managed via GPO.
 *   **Automation (PowerShell):** Developed and executed a PowerShell script for bulk user creation for Active Directory.
 *   **Software Deployment:** Orchestrated automated software installation for a client machine via GPO.
+*   **Security:** Configured Remote Server Administration Tools (RSAT) for secure, delegated server management.
+
 
 ### Phase 3: Hybrid & Cloud Identity
 *   **Secure Hybrid Setup:** Configured a domain-joined member server and managed IE Enhanced Security settings for secure administrative access.
